@@ -10,6 +10,7 @@ const AppCard = ({
   alt,
   children,
 }) => {
+
   const appCardClassNames = classNames({
     "text-left": true,
     "card-item rounded-theme shadow-sm p-4 flex-fill": variant === "themeCard",

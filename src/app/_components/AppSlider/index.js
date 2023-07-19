@@ -1,20 +1,18 @@
 "use client";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
-//import Slider from "react-slick";
+import { Carousel } from "react-responsive-carousel";
 import { Row, Col } from "react-bootstrap";
 
 import AppButton from "@/app/_components/AppButton";
 
 import { sliderData } from "@/app/data";
 
-//import "slick-carousel/slick/slick.css";
-//import "slick-carousel/slick/slick-theme.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const AppSlider = () => {
   const settings = {
     showIndicators: true,
+    showThumbs: false,
     swipeable: true,
     transitionTime: 5,
     showArrows: false,
