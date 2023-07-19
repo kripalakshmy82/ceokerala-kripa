@@ -5,7 +5,7 @@ import { oneOf, string } from "prop-types";
 const AppButton = ({ variant = "default", color = "black", href, title }) => {
   const appBtnClassNames = classNames({
     "text-center": true,
-    "theme-btn border-theme": variant === "themeBtn",
+    "theme-btn-component border-theme": variant === "themeBtn",
     "color-black": color === "black",
     "color-white": color === "white",
   });

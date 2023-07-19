@@ -2,10 +2,13 @@
 
 :root {
   --color-dark: #000;
+  --color-dark-light: #363848;
   --color-grey: #ccc;
   --color-white: #fff;
   --color-blue: #0556f3;
   --bg-color: #f1f1f1;
+  --bg-violet-light: #ECDEFF;
+  --bg-violet-dark: #5F4BDB;
   --theme-bg-color: #f0483e;
   --font-medium: 300;
   --font-regular: 400;
@@ -17,6 +20,11 @@
   --sub-head-font-size: 26px;
   --content: "";
   --zero: 0;
+  --f-18: 18px;
+  --f-20: 20px;
+  --f-22: 22px;
+  --f-24: 24px;
+  --f-26: 26px;
   --theme-radius: 1.5rem;
   --absolute: absolute;
   --relative: relative;
@@ -25,12 +33,13 @@
   --object-block: block;
   --object-hidden: hidden;
   --object-visible: visible;
+  --rounded-theme: 1.2rem;
   --theme-border: 1px solid #f0483e;
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 }
 
 * {
@@ -48,7 +57,7 @@ body {
 body {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -67,11 +76,41 @@ footer {
   background-color: #0b0914;
 }
 
-.border-theme {
-  border: var(--theme-border);
+.navbar-brand,
+.foot-logo {
+  width: 260px;
+}
+.section-block-sm {
+  padding: 50px 0;
+}
+.section-block-md {
+  padding: 80px 0;
+}
+.section-block-lg {
+  padding: 120px 0;
+}
+.section-block-team {
+  padding: 60px 0 0;
+}
+.theme-btn-component {
+  text-align: center;
+  color: var(--color-dark);
+}
+.flex-block-links {
+  border-bottom: 1px solid #ccc;
 }
 
-.theme-btn {
+.theme-btn-component:hover {
+  color: var(--color-white);
+  background-color: var(--theme-bg-color);
+}
+.theme-btn-component.btn-theme-fill {
+  color: var(--color-white);
+  background-color: var(--bg-violet-dark);
+}
+
+.play-btn-component,
+.theme-btn-component {
   height: 50px;
   min-width: 180px;
   line-height: 48px;
@@ -80,25 +119,12 @@ footer {
   text-decoration: none;
 }
 
-.theme-btn:hover {
-  color: var(--color-white);
-  background-color: var(--theme-bg-color);
-}
-
-.play-btn {
-  background: var(--color-white);
-}
-
-.play-btn:hover {
+.play-btn-component:hover {
   color: var(--color-blue);
 }
 
-.color-black {
-  color: var(--color-dark);
-}
-
-.color-white {
-  color: var(--color-white);
+.play-btn-component {
+  background: #fff;
 }
 
 .campign-item-sm {
@@ -148,10 +174,6 @@ footer {
   color: var(--color-blue);
 }
 
-.section-block {
-  padding: 50px 0;
-}
-
 .campign-latest-image {
   min-height: 550px;
 }
@@ -159,15 +181,13 @@ footer {
 .border-theme {
   border: var(--theme-border) !important;
 }
-
 .voter-h-card-sec {
   top: -60px;
   position: relative;
 }
-
 .voter-h-card-item .title i {
   right: var(--zero);
-  top: 4px;
+  top: 2px;
   line-height: var(--zero);
 }
 
@@ -176,11 +196,131 @@ footer {
   text-align: center;
   margin: 0 auto;
 }
-
-svg:hover path {
-  background-color: var(--theme-bg-color)
+.card-item.shadow-sm:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  -moz-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
-
+.rounded-theme {
+  border-radius: var(--rounded-theme);
+}
+.flex-block-links .active-item::after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: #2bc155;
+}
+.flex-block-links .active-item {
+  font-weight: var(--font-semibold);
+}
+.flex-block-links .link {
+  color: var(--color-dark-light);
+  font-size: var(--f-20);
+}
+/* pagination */
+.pagination > .page-item:first-of-type .page-link,
+.pagination > .page-item:last-of-type .page-link {
+  background-color: transparent;
+  height: auto;
+  width: auto;
+}
+.pagination > .page-item > .page-link {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin: 0 5px !important;
+  background-color: var(--bg-violet-light);
+}
+.pagination > .page-item > .page-link-active {
+  background-color: var(--bg-violet-dark);
+}
+.pagination-wrap {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+/* pagination */
+/*==============================================floating==============================================*/
+.floating {
+  animation-name: floating;
+  -webkit-animation-name: floating;
+  animation-duration: 3.5s;
+  -webkit-animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(8%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(8%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+/*==============================================tossing==============================================*/
+.tossing {
+  animation-name: tossing;
+  -webkit-animation-name: tossing;
+  animation-duration: 3.5s;
+  -webkit-animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+@keyframes tossing {
+  0% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+@-webkit-keyframes tossing {
+  0% {
+    -webkit-transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(4deg);
+  }
+  100% {
+    -webkit-transform: rotate(-4deg);
+  }
+}
+/*  */
+/* nav-pills */
+.nav-pills .nav-item .active {
+  border: var(--theme-border) !important;
+}
+.card.theme-card {
+  border-radius: 20px;
+}
+.card-body.theme-gap {
+  padding: 2.5rem;
+}
+.counter-card.card {
+  background-color: var(--bg-violet-dark);
+}
+.counter {
+  font-size: 4rem;
+}
 .title-text::after {
   content: "";
   right: var(--zero);
@@ -189,6 +329,28 @@ svg:hover path {
   height: 20px;
   background: #ccc;
   position: absolute;
+}
+/* footer */
+.social-icon .icon {
+  display: inline-block;
+  border: 1px solid #535353;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  line-height: 56px;
+  text-align: center;
+}
+.foot-links li {
+  margin-bottom: 8px;
+}
+.foot-links li:last-of-type {
+  margin-bottom: 0;
+}
+.foot-links li a {
+  color: var(--color-grey);
+}
+.gif-img {
+  width: 48px;
 }
 
 @media (prefers-color-scheme: dark) {

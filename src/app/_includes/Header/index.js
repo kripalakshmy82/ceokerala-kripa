@@ -29,13 +29,17 @@ const Header = () => {
           ))}
         </Form.Select>
 
-        <Button variant="secondary" onClick={() => handleShow()}>
+        <Button
+          variant="secondary"
+          className="bg-transparent border-0"
+          onClick={() => handleShow()}
+        >
           <i>
             <svg
               viewBox="0 0 24 24"
               width="24"
               height="24"
-              stroke="currentColor"
+              stroke="gray"
               strokeWidth="2"
               fill="none"
               strokeLinecap="round"

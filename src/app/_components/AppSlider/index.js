@@ -1,27 +1,28 @@
 "use client";
 
-import Slider from "react-slick";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+//import Slider from "react-slick";
 import { Row, Col } from "react-bootstrap";
 
 import AppButton from "@/app/_components/AppButton";
 
 import { sliderData } from "@/app/data";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+//import "slick-carousel/slick/slick.css";
+//import "slick-carousel/slick/slick-theme.css";
 
 const AppSlider = () => {
   const settings = {
-    dots: true,
-    speed: 500,
-    loop: false,
-    fade: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    showIndicators: true,
+    swipeable: true,
+    transitionTime: 5,
+    showArrows: false,
+    showStatus: false,
   };
 
   return (
-    <Slider {...settings}>
+    <Carousel {...settings}>
       {sliderData.map(
         (
           {
@@ -40,7 +41,7 @@ const AppSlider = () => {
           <div className="slide-item" key={key}>
             <Row>
               <Col className="col-lg-7 col-md-7 col-sm-12 col-12 d-flex align-items-center">
-                <div className="content">
+                <div className="content text-start">
                   <h2 className="mb-lg-4 mb-md-4 mb-sm-3 mb-3">{heading}</h2>
                   <p>{description}</p>
                   <div className="btn-box d-flex gap-3">
@@ -53,7 +54,7 @@ const AppSlider = () => {
 
                     <a
                       href={videoLink}
-                      className="play-btn theme-btn border-0 bg-transparent color-black"
+                      className="play-btn-component border-0 bg-transparent color-black"
                     >
                       <svg
                         viewBox="0 0 24 24"
@@ -76,28 +77,28 @@ const AppSlider = () => {
               </Col>
               <Col className="col-lg-5 col-md-5 col-sm-12 col-12">
                 <div className="campign-latest-image position-relative">
-                  <span className="campign-item campign-item-1 campign-item-sm d-block">
+                  <span className="floating campign-item campign-item-1 campign-item-sm d-block">
                     <img
                       src={circleImgOne}
                       className="rounded-circle w-100"
                       alt={alt}
                     />
                   </span>
-                  <span className="campign-item campign-item-2 campign-item-sm d-block">
+                  <span className="tossing campign-item campign-item-2 campign-item-sm d-block">
                     <img
                       src={circleImgTwo}
                       className="rounded-circle w-100"
                       alt={alt}
                     />
                   </span>
-                  <span className="campign-item campign-item-3 campign-item-md d-block">
+                  <span className="tossing campign-item campign-item-3 campign-item-md d-block">
                     <img
                       src={circleImgThree}
                       className="rounded-circle w-100"
                       alt={alt}
                     />
                   </span>
-                  <span className="campign-item campign-item-4 campign-item-lg d-block">
+                  <span className="tossing campign-item campign-item-4 campign-item-lg d-block">
                     <img
                       src={circleImgFour}
                       className="rounded-circle w-100"
@@ -110,7 +111,7 @@ const AppSlider = () => {
           </div>
         )
       )}
-    </Slider>
+    </Carousel>
   );
 };
 
