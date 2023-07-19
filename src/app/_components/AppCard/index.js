@@ -13,13 +13,13 @@ const AppCard = ({
 
   const appCardClassNames = classNames({
     "text-left": true,
-    "card-item rounded-theme shadow-sm p-4 flex-fill": variant === "themeCard",
+    "card-item rounded-theme shadow-sm p-4 flex-fill border-0": variant === "themeCard",
   });
 
   return (
     <Card className={appCardClassNames}>
-      <span className="d-block mb-3">
-        <img src={imgUrl} alt={alt} />
+      <span className="d-block mb-3 app-card">
+        <img src={imgUrl} alt={alt}  />
       </span>
       <h3>{heading}</h3>
       <p className="mb-0">{description}</p>

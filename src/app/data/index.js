@@ -212,3 +212,21 @@ export const helpCardData = [
       "On the other hand, Election to the Local Self Government bodies, the division of wards, reservation.",
   },
 ];
+
+export const newsUpdate = [
+  {
+    heading: "Electoral Roll 2023 - Continuous updation (Second quarter)",
+    description: "Booth Wise Voters List",
+    href: "#",
+  },
+  {
+    heading: "Special Summary Revision - 2023",
+    description: "Booth Wise Voters List",
+    href: "#",
+  },
+  {
+    heading: "Electoral Roll 2023 - Continuous updation (Second quarter)",
+    description: "Booth Wise Voters List",
+    href: "#",
+  },
+];

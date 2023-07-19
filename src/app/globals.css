@@ -72,7 +72,6 @@ a {
 }
 
 footer {
-  padding: 1.5rem 0;
   background-color: #0b0914;
 }
 
@@ -204,7 +203,7 @@ footer {
 .rounded-theme {
   border-radius: var(--rounded-theme);
 }
-.flex-block-links .active-item::after {
+.flex-block-links .nav-tabs .nav-link.active::after {
   content: "";
   left: 0;
   bottom: 0;
@@ -213,7 +212,8 @@ footer {
   position: absolute;
   background-color: #2bc155;
 }
-.flex-block-links .active-item {
+.flex-block-links .nav-tabs .nav-link.active {
+  position: relative;
   font-weight: var(--font-semibold);
 }
 .flex-block-links .link {
@@ -352,6 +352,13 @@ footer {
 .gif-img {
   width: 48px;
 }
+.app-card img {
+  width: 80px;
+}
+.foot-sub {
+  border-top: 1px solid var(--color-dark-light);
+}
+
 
 @media (prefers-color-scheme: dark) {
   html {

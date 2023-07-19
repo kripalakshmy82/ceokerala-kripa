@@ -29,7 +29,7 @@ const footDesc = {
 
 const Footer = () => {
   return (
-    <footer className="bg-dark py-5">
+    <footer className="bg-dark pt-5">
       <Container>
         <Row>
           <div className="d-flex flex-row justify-content-between align-items-center mb-5">
@@ -134,6 +134,11 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
+      <div className="foot-sub py-4 mt-5">
+        <Container>
+          <p className="mb-0 text-white text-center">Developed &amp; Maintained by <a href="#" target="_blank" className="text-warning">Invis Pvt.Ltd</a> </p>
+        </Container>
+      </div>
     </footer>
   );
 };
