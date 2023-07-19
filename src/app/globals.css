@@ -1,3 +1,5 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
 :root {
   --color-dark: #000;
   --color-grey: #ccc;
@@ -29,7 +31,6 @@
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
 }
 
 * {
@@ -61,13 +62,16 @@ a {
   text-decoration: none;
 }
 
-.theme-btn-component {
-  text-align: center;
-  color: var(--color-dark);
+footer {
+  padding: 1.5rem 0;
+  background-color: #0b0914;
 }
 
-.play-btn-component,
-.theme-btn-component {
+.border-theme {
+  border: var(--theme-border);
+}
+
+.theme-btn {
   height: 50px;
   min-width: 180px;
   line-height: 48px;
@@ -76,17 +80,25 @@ a {
   text-decoration: none;
 }
 
-.theme-btn-component:hover {
+.theme-btn:hover {
   color: var(--color-white);
-  background-color: var(--theme-bg-color)
+  background-color: var(--theme-bg-color);
 }
 
-.play-btn-component:hover {
+.play-btn {
+  background: var(--color-white);
+}
+
+.play-btn:hover {
   color: var(--color-blue);
 }
 
-.play-btn-component {
-  background: #fff;
+.color-black {
+  color: var(--color-dark);
+}
+
+.color-white {
+  color: var(--color-white);
 }
 
 .campign-item-sm {
@@ -164,9 +176,11 @@ a {
   text-align: center;
   margin: 0 auto;
 }
+
 svg:hover path {
   background-color: var(--theme-bg-color)
 }
+
 .title-text::after {
   content: "";
   right: var(--zero);

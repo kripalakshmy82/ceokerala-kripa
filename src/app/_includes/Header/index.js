@@ -1,6 +1,8 @@
 "use client";
+
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+
 import AppNav from "./components/Nav";
 import AppCanvas from "./components/OffCanvas";
 
@@ -27,7 +29,7 @@ const Header = () => {
           ))}
         </Form.Select>
 
-        <Button variant="secondary" onClick={handleShow}>
+        <Button variant="secondary" onClick={() => handleShow()}>
           <i>
             <svg
               viewBox="0 0 24 24"

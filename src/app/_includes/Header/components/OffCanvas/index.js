@@ -1,8 +1,8 @@
 import { Offcanvas } from "react-bootstrap";
 
-const AppCanvas = ({ show, handleClose }) => {
+const AppCanvas = ({ show, onHide }) => {
   return (
-    <Offcanvas show={show} onHide={handleClose} placement="end">
+    <Offcanvas show={show} onHide={onHide} placement="end">
       <Offcanvas.Header closeButton>
           <Offcanvas.Title>Offcanvas</Offcanvas.Title>
         </Offcanvas.Header>

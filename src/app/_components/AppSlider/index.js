@@ -1,16 +1,18 @@
 "use client";
+
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { Row, Col } from "react-bootstrap";
+
 import AppButton from "@/app/_components/AppButton";
 
 import { sliderData } from "@/app/data";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const AppSlider = () => {
-  var settings = {
+  const settings = {
     dots: true,
-    infinite: true,
     speed: 500,
     loop: false,
     fade: true,
@@ -42,11 +44,16 @@ const AppSlider = () => {
                   <h2 className="mb-lg-4 mb-md-4 mb-sm-3 mb-3">{heading}</h2>
                   <p>{description}</p>
                   <div className="btn-box d-flex gap-3">
-                    <AppButton href={href} color="black" title="Discover" variant="themeBtn" />
-                
+                    <AppButton
+                      href={href}
+                      color="black"
+                      title="Discover"
+                      variant="themeBtn"
+                    />
+
                     <a
                       href={videoLink}
-                      className="border-0 bg-transparent play-btn-component"
+                      className="play-btn theme-btn border-0 bg-transparent color-black"
                     >
                       <svg
                         viewBox="0 0 24 24"

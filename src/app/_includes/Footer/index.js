@@ -1,10 +1,10 @@
 "use client";
+
 import { Container, Row, Col } from "react-bootstrap";
-import styles from "@/app/page.module.css";
 
 const Footer = () => {
   return (
-    <div className={styles.footer}>
+    <footer>
       <Container>
         <Row>
           <Col className="col-12">
@@ -14,7 +14,7 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </footer>
   );
 };
 
