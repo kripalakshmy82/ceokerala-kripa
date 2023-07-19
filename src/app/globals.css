@@ -1,0 +1,184 @@
+:root {
+  --color-dark: #000;
+  --color-grey: #ccc;
+  --color-white: #fff;
+  --color-blue: #0556f3;
+  --bg-color: #f1f1f1;
+  --theme-bg-color: #f0483e;
+  --font-medium: 300;
+  --font-regular: 400;
+  --font-semibold: 500;
+  --font-bold: 600;
+  --font-extra-bold: 700;
+  --base-font-size: 18px;
+  --head-font-size: 52px;
+  --sub-head-font-size: 26px;
+  --content: "";
+  --zero: 0;
+  --theme-radius: 1.5rem;
+  --absolute: absolute;
+  --relative: relative;
+  --height-vh: 100vh;
+  --object-none: none;
+  --object-block: block;
+  --object-hidden: hidden;
+  --object-visible: visible;
+  --theme-border: 1px solid #f0483e;
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.theme-btn-component {
+  text-align: center;
+  color: var(--color-dark);
+}
+
+.play-btn-component,
+.theme-btn-component {
+  height: 50px;
+  min-width: 180px;
+  line-height: 48px;
+  border-radius: 30px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.theme-btn-component:hover {
+  color: var(--color-white);
+  background-color: var(--theme-bg-color)
+}
+
+.play-btn-component:hover {
+  color: var(--color-blue);
+}
+
+.play-btn-component {
+  background: #fff;
+}
+
+.campign-item-sm {
+  width: 200px;
+  height: 200px;
+}
+
+.campign-item-md {
+  width: 250px;
+  height: 250px;
+}
+
+.campign-item-lg {
+  width: 300px;
+  height: 300px;
+}
+
+.campign-item-1 {
+  left: var(--zero);
+  top: var(--zero);
+}
+
+.campign-item-2 {
+  right: var(--zero);
+  bottom: var(--zero);
+}
+
+.campign-item-3 {
+  left: 0;
+  bottom: var(--zero);
+}
+
+.campign-item-4 {
+  right: var(--zero);
+  top: 0;
+}
+
+.campign-item {
+  position: var(--absolute);
+}
+
+.spotlight .content h2 {
+  font-size: var(--head-font-size);
+}
+
+.spotlight .content h2 span {
+  color: var(--color-blue);
+}
+
+.section-block {
+  padding: 50px 0;
+}
+
+.campign-latest-image {
+  min-height: 550px;
+}
+
+.border-theme {
+  border: var(--theme-border) !important;
+}
+
+.voter-h-card-sec {
+  top: -60px;
+  position: relative;
+}
+
+.voter-h-card-item .title i {
+  right: var(--zero);
+  top: 4px;
+  line-height: var(--zero);
+}
+
+.board-team .img-block {
+  max-width: 140px;
+  text-align: center;
+  margin: 0 auto;
+}
+svg:hover path {
+  background-color: var(--theme-bg-color)
+}
+.title-text::after {
+  content: "";
+  right: var(--zero);
+  top: 3px;
+  width: 1px;
+  height: 20px;
+  background: #ccc;
+  position: absolute;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
