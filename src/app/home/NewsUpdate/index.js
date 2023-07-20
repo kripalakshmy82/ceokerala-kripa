@@ -67,8 +67,51 @@ const NewsUpdate = () => {
             ))}
           </Tab.Content>
         </Tab.Container>
+
+        <div className="pagination-wrap">
+          <ul className="pagination justify-content-center m-0">
+            <li className="page-item disabled">
+              <a className="page-link border-0">
+                <i>
+                  <img src="./icons/chevron-left.svg" alt="" />
+                </i>
+                Previous
+              </a>
+            </li>
+            <li className="page-item">
+              <a className="page-link border-0 text-center" href="#">
+                1
+              </a>
+            </li>
+            <li className="page-item">
+              <a
+                className="page-link page-link-active border-0 text-center text-white"
+                href="#"
+              >
+                2
+              </a>
+            </li>
+            <li className="page-item">
+              <a className="page-link border-0 text-center" href="#">
+                3
+              </a>
+            </li>
+            <li className="page-item">
+              <a className="page-link border-0" href="#">
+                Next{" "}
+                <i>
+                  <img src="./icons/chevron-right.svg" alt="" />
+                </i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </Container>
+      
+      
     </section>
+
+    
   );
 };
 

@@ -230,3 +230,27 @@ export const newsUpdate = [
     href: "#",
   },
 ];
+
+export const linkedCardData = [
+  {
+    href: "#",
+    imgUrl: "./assets/sveep.svg",
+    heading: "SVEEP",
+    description: `SVEEP is the flagship program of the Election Commission of India
+    for voter education, spreading voter awareness and promoting.`,
+  },
+  {
+    href: "#",
+    imgUrl: "./assets/tweet.svg",
+    heading: "Tweets",
+    description: `Official Twitter handle of The Chief Electoral Officer, Kerala.
+    Conducting free and fair election and enrolling every eligible person.`,
+  },
+  {
+    href: "#",
+    imgUrl: "./assets/media.svg",
+    heading: "Media &amp; Publications",
+    description: `ECI Publications and data collection fuels the Election Commission
+    of India's mission to improve voter experience and support.`,
+  },
+];

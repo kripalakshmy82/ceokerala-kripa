@@ -4,6 +4,7 @@ import VotersCard from "./home/VotersCard";
 import BoardTeam from "./home/BoardTeam";
 import HelpCard from "./home/HelpCard";
 import NewsUpdate from "./home/NewsUpdate";
+import LinkedCard from "./home/LinkedCard";
 
 export const metadata = {
   title: "ecm-kerala",
@@ -18,6 +19,7 @@ export default function Home() {
       <BoardTeam />
       <HelpCard  />
       <NewsUpdate />
+      <LinkedCard />
     </main>
   );
 }
