@@ -8,12 +8,14 @@ const AppCard = ({
   description,
   imgUrl,
   alt,
+  className = "",
   children,
 }) => {
   const appCardClassNames = classNames({
     "text-left": true,
     "card-item rounded-theme shadow-sm flex-fill border-0":
       variant === "themeCard",
+    [className]: className !== ""
   });
 
   return (
@@ -33,6 +35,7 @@ AppCard.propTypes = {
   heading: string.isRequired,
   description: string.isRequired,
   imgUrl: string.isRequired,
+  className: string,
   children: node,
   variant: oneOf(["default", "themeCard"]).isRequired,
 };
