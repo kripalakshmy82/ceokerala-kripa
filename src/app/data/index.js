@@ -254,3 +254,33 @@ export const linkedCardData = [
     of India's mission to improve voter experience and support.`,
   },
 ];
+
+export const galleryData = [
+  {
+    alt: "",
+    href: "#",
+    imgUrl: "./gallery/gallery-1.jpg",
+    heading:
+      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
+    description:
+      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+  },
+  {
+    alt: "",
+    href: "#",
+    imgUrl: "./gallery/gallery-2.jpg",
+    heading:
+      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
+    description:
+      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+  },
+  {
+    alt: "",
+    href: "#",
+    imgUrl: "./gallery/gallery-1.jpg",
+    heading:
+      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
+    description:
+      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+  },
+];

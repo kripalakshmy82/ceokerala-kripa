@@ -38,7 +38,7 @@ const AppSlider = () => {
         ) => (
           <div className="slide-item" key={key}>
             <Row>
-              <Col className="col-lg-7 col-md-7 col-sm-12 col-12 d-flex align-items-center">
+              <Col className="col-lg-7 col-md-12 col-sm-12 col-12 d-flex align-items-center">
                 <div className="content text-start">
                   <h2 className="mb-lg-4 mb-md-4 mb-sm-3 mb-3">{heading}</h2>
                   <p>{description}</p>
@@ -73,7 +73,7 @@ const AppSlider = () => {
                   </div>
                 </div>
               </Col>
-              <Col className="col-lg-5 col-md-5 col-sm-12 col-12">
+              <Col className="col-lg-5 col-md-5 col-sm-12 col-12 d-lg-block d-md-none d-sm-none d-none">
                 <div className="campign-latest-image position-relative">
                   <span className="floating campign-item campign-item-1 campign-item-sm d-block">
                     <img

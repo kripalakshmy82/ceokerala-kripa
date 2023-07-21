@@ -3,9 +3,9 @@
 import { Inter } from "next/font/google";
 
 // Configuring Application font
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], weight:["500"] });
 
-// Importing Applocation Styles
+// Importing Application Styles
 import './globals.css';
 
 // Impoting Application Root Component

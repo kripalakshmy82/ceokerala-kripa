@@ -8,7 +8,7 @@ import AppTicker from '@/app/home/NewsTicker';
 const SpotLight = () => {
   return (
     <section className="spotlight section-block-sm bg-light">
-      <Container>
+      <Container fluid="sm">
         <span className="object-1 position-absolute"> </span>
         <span className="object-2 position-absolute"> </span>
         <span className="object-3 position-absolute"> </span>
