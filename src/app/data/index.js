@@ -10,7 +10,6 @@ export const sliderData = [
         form, by injected humour, or randomised words which don't
         look even slightly believable.`,
     href: "#",
-    videoLink: "#",
     alt: "images",
     circleImgOne: "./slider-img/spot-img1.jpg",
     circleImgTwo: "./slider-img/spot-img2.jpg",
@@ -28,7 +27,6 @@ export const sliderData = [
     form, by injected humour, or randomised words which don't
     look even slightly believable.`,
     href: "#",
-    videoLink: "#",
     alt: "images",
     circleImgOne: "./slider-img/spot-img1.jpg",
     circleImgTwo: "./slider-img/spot-img2.jpg",
@@ -249,7 +247,7 @@ export const linkedCardData = [
   {
     href: "#",
     imgUrl: "./assets/media.svg",
-    heading: "Media &amp; Publications",
+    heading: "Media & Publications",
     description: `ECI Publications and data collection fuels the Election Commission
     of India's mission to improve voter experience and support.`,
   },

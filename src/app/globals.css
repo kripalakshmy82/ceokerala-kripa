@@ -5,11 +5,11 @@
   --color-dark-light: #363848;
   --color-grey: #ccc;
   --color-white: #fff;
-  --color-blue: #0556f3;
+  --color-blue: #5F4BDB;
   --bg-color: #f1f1f1;
-  --bg-violet-light: #ECDEFF;
-  --bg-violet-dark: #5F4BDB;
-  --theme-bg-color: #f0483e;
+  --bg-violet-light: #ecdeff;
+  --bg-violet-dark: #5f4bdb;
+  --theme-bg-color: #5F4BDB;
   --font-medium: 300;
   --font-regular: 400;
   --font-semibold: 500;
@@ -34,7 +34,7 @@
   --object-hidden: hidden;
   --object-visible: visible;
   --rounded-theme: 1.2rem;
-  --theme-border: 1px solid #f0483e;
+  --theme-border: 1px solid #5F4BDB;
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
@@ -95,9 +95,9 @@ footer {
   text-align: center;
   color: var(--color-dark);
 }
-.flex-block-links {
+/* .flex-block-links {
   border-bottom: 1px solid #ccc;
-}
+} */
 
 .theme-btn-component:hover {
   color: var(--color-white);
@@ -164,7 +164,9 @@ footer {
 .campign-item {
   position: var(--absolute);
 }
-
+.spotlight.section-block-sm {
+  padding: 50px 0 100px;
+}
 .spotlight .content h2 {
   font-size: var(--head-font-size);
 }
@@ -172,7 +174,11 @@ footer {
 .spotlight .content h2 span {
   color: var(--color-blue);
 }
-
+.spotlight .carousel .control-dots .dot.selected {
+    width: 40px;
+    height: 7px;
+    border-radius: 5px;
+}
 .campign-latest-image {
   min-height: 550px;
 }
@@ -181,7 +187,7 @@ footer {
   border: var(--theme-border) !important;
 }
 .voter-h-card-sec {
-  top: -60px;
+  top: -90px;
   position: relative;
 }
 .voter-h-card-item .title i {
@@ -352,13 +358,12 @@ footer {
 .gif-img {
   width: 48px;
 }
-.app-card img {
-  width: 80px;
+.app-card {
+  width: 220px;
 }
 .foot-sub {
   border-top: 1px solid var(--color-dark-light);
 }
-
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -367,5 +372,4 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-  
 }

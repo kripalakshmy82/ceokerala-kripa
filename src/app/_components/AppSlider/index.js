@@ -14,7 +14,7 @@ const AppSlider = () => {
     showIndicators: true,
     showThumbs: false,
     swipeable: true,
-    transitionTime: 5,
+    transitionTime: 10,
     showArrows: false,
     showStatus: false,
   };
@@ -27,7 +27,6 @@ const AppSlider = () => {
             heading,
             description,
             href,
-            videoLink,
             alt,
             circleImgOne,
             circleImgTwo,
@@ -41,7 +40,7 @@ const AppSlider = () => {
               <Col className="col-lg-7 col-md-12 col-sm-12 col-12 d-flex align-items-center">
                 <div className="content text-start">
                   <h2 className="mb-lg-4 mb-md-4 mb-sm-3 mb-3">{heading}</h2>
-                  <p>{description}</p>
+                  <p className="mb-5">{description}</p>
                   <div className="btn-box d-flex gap-3">
                     <AppButton
                       href={href}
@@ -49,27 +48,6 @@ const AppSlider = () => {
                       title="Discover"
                       variant="themeBtn"
                     />
-
-                    <a
-                      href={videoLink}
-                      className="play-btn-component border-0 bg-transparent color-black"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="css-i6dzq1"
-                      >
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                      </svg>
-                      Watch Video
-                    </a>
                   </div>
                 </div>
               </Col>

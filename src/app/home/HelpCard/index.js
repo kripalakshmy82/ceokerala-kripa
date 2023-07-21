@@ -13,7 +13,7 @@ const HelpCard = () => {
           {helpCardData.map(({ alt, imgUrl, heading, description }, key) => (
             <AppCard key={key} className="p-4">
               <span className="d-block mb-3 app-card">
-                <img src={imgUrl} alt={alt} />
+                <img src={imgUrl} alt={alt} className="w-100" />
               </span>
               <h3>{heading}</h3>
               <p className="mb-0">{description}</p>
