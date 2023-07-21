@@ -9,8 +9,6 @@ import AppCanvas from "./components/OffCanvas";
 const language = [
   { id: 1, option: "English" },
   { id: 2, option: "Malayalam" },
-  { id: 3, option: "Tamil" },
-  { id: 4, option: "Hindi" },
 ];
 
 const Header = () => {
@@ -21,7 +19,7 @@ const Header = () => {
   return (
     <header id="header">
       <AppNav>
-        <Form.Select aria-label="Default select example">
+        <Form.Select className="bg-transparent border-0" aria-label="Default select example">
           {language.map(({ id, option }, key) => (
             <option value={id} key={key}>
               {option}
