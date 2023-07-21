@@ -22,10 +22,10 @@ const GalleryCard = () => {
                 <h2 className="site-heading">News and Updates</h2>
               </div>
             </div>
-            <Nav variant="pills" className="flex-block flex-block-links d-flex">
+            <Nav variant="pills" className="flex-block flex-block-links gap-2 d-flex">
               {tabsNavigation.map(({ title, key }) => (
                 <Nav.Item key={key} className="position-relative">
-                  <Nav.Link eventKey={key}>{title}</Nav.Link>
+                  <Nav.Link eventKey={key} className="px-5">{title}</Nav.Link>
                 </Nav.Item>
               ))}
             </Nav>

@@ -51,7 +51,16 @@ const AppSlider = () => {
                   </div>
                 </div>
               </Col>
-              <Col className="col-lg-5 col-md-5 col-sm-12 col-12 d-lg-block d-md-none d-sm-none d-none">
+              <Col className="col-lg-5 col-md-5 col-sm-12 col-12 d-lg-block d-md-none d-sm-none d-none position-relative">
+              <span className="object-1 position-absolute"> 
+                <img src="./assets/spot-object-1.png" alt="" /> 
+              </span>
+              <span className="object-2 position-absolute"> 
+                <img src="./assets/spot-object-2.png" alt="" /> 
+              </span>
+              <span className="object-3 position-absolute"> 
+                <img src="./assets/spot-object-3.png" alt="" /> 
+              </span>
                 <div className="campign-latest-image position-relative">
                   <span className="floating campign-item campign-item-1 campign-item-sm d-block">
                     <img

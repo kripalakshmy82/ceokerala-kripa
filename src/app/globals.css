@@ -125,30 +125,41 @@ footer {
 .play-btn-component {
   background: #fff;
 }
-
+.spotlight .object-1 {
+  top: var(--zero);
+  left: 15px;
+}
+.spotlight .object-2 {
+  top: var(--zero);
+  right: 15px;
+}
+.spotlight .object-3 {
+    bottom: 80px;
+    right: 38px;
+}
 .campign-item-sm {
-  width: 200px;
-  height: 200px;
+  width: 142px;
+  height: 142px;
 }
 
 .campign-item-md {
-  width: 250px;
-  height: 250px;
+  width: 242px;
+  height: 242px;
 }
 
 .campign-item-lg {
-  width: 300px;
-  height: 300px;
+  width: 338px;
+  height: 338px;
 }
 
 .campign-item-1 {
   left: var(--zero);
-  top: var(--zero);
+  top: 25%;
 }
 
 .campign-item-2 {
-  right: var(--zero);
-  bottom: var(--zero);
+    right: 18%;
+    bottom: 10%;
 }
 
 .campign-item-3 {
@@ -180,7 +191,7 @@ footer {
     border-radius: 5px;
 }
 .campign-latest-image {
-  min-height: 550px;
+  min-height: 600px;
 }
 
 .border-theme {
@@ -364,6 +375,16 @@ footer {
 .foot-sub {
   border-top: 1px solid var(--color-dark-light);
 }
+.flex-block-links.nav-pills .nav-link {
+  border-radius: 30px;
+  color: var(--color-grey);
+  border: 1px solid var(--color-grey);
+  
+}
+.flex-block-links.nav-pills .nav-link.active {
+  border: 1px solid var(--theme-bg-color);
+  background-color: transparent;color: var(--color-dark);
+} 
 
 @media (prefers-color-scheme: dark) {
   html {
