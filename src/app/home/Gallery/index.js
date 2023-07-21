@@ -13,7 +13,7 @@ const tabsNavigation = [
 ];
 const GalleryCard = () => {
   return (
-    <section class="gallery mb-5">
+    <section className="gallery mb-5">
       <Container>
         <Tab.Container id="news-tabs" defaultActiveKey="images" unmountOnExit>
           <div className="news-title-section d-flex flex-lg-row flex-md-row flex-sm-column flex-column justify-content-between align-items-center mb-lg-4 mb-md-4 mb-sm-4 mb-3">
