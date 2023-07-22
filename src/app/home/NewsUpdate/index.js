@@ -27,7 +27,7 @@ const NewsUpdate = () => {
           defaultActiveKey="latest-news"
           unmountOnExit
         >
-          <div className="news-title-section d-flex flex-lg-row flex-md-row flex-sm-column flex-column justify-content-between align-items-center mb-lg-4 mb-md-4 mb-sm-4 mb-3">
+          <div className="news-title-section d-flex flex-lg-row flex-md-row flex-sm-column flex-column justify-content-between align-items-center mb-lg-5 mb-md-5 mb-sm-4 mb-3">
             <div className="flex-block">
               <div className="flex-item">
                 <h2 className="site-heading">News and Updates</h2>

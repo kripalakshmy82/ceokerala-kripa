@@ -14,9 +14,10 @@ const AppSlider = () => {
     showIndicators: true,
     showThumbs: false,
     swipeable: true,
-    transitionTime: 10,
+    transitionTime: 1000,
     showArrows: false,
     showStatus: false,
+    autoPlay: true,
   };
 
   return (

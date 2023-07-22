@@ -16,9 +16,9 @@ const tabsNavigation = [
 
 const GalleryCard = ({ imgUrl, alt, href, heading, description, type }) => {
   return (
-    <div className="card card-item theme-card overflow-hidden border-0 shadow-sm">
+    <div className="card card-item theme-card overflow-hidden border-0 shadow-sm position-relative">
       <img src={imgUrl} className="card-img-top" alt={alt} />
-      {type === "videos" && <div>Put Video Icon Here</div>}
+      {type === "videos" && <span className="m-auto d-block position-absolute video-icon"><svg viewBox="0 0 24 24" width="24" height="24" stroke="#5f4bdb" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="css-i6dzq1"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></span>}
       <div className="card-body theme-gap">
         <h5 className="card-title">
           <a
@@ -41,15 +41,15 @@ const Gallery = () => {
     <section className="gallery mb-5">
       <Container>
         <Tab.Container
-          id="news-tabs"
+          id="gallery-tabs"
           defaultActiveKey={activeTab}
           onSelect={(eventKey) => setActiveTab(eventKey)}
           unmountOnExit
         >
-          <div className="news-title-section d-flex flex-lg-row flex-md-row flex-sm-column flex-column justify-content-between align-items-center mb-lg-4 mb-md-4 mb-sm-4 mb-3">
+          <div className="news-title-section d-flex flex-lg-row flex-md-row flex-sm-column flex-column justify-content-between align-items-center mb-lg-5 mb-md-5 mb-sm-4 mb-3">
             <div className="flex-block">
               <div className="flex-item">
-                <h2 className="site-heading">News and Updates</h2>
+                <h2 className="site-heading">Gallery</h2>
               </div>
             </div>
             <Nav
