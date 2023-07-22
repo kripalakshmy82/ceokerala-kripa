@@ -1,11 +1,10 @@
-
 import SpotLight from "./home/Spotlight";
 import VotersCard from "./home/VotersCard";
 import BoardTeam from "./home/BoardTeam";
 import HelpCard from "./home/HelpCard";
 import NewsUpdate from "./home/NewsUpdate";
 import LinkedCard from "./home/LinkedCard";
-import GalleryCard from "./home/Gallery";
+import Gallery from "./home/Gallery";
 import TotalVoters from "./home/TotalVoters";
 
 export const metadata = {
@@ -19,10 +18,10 @@ export default function Home() {
       <SpotLight />
       <VotersCard />
       <BoardTeam />
-      <HelpCard  />
+      <HelpCard />
       <NewsUpdate />
       <LinkedCard />
-      <GalleryCard />
+      <Gallery />
       <TotalVoters />
     </main>
   );
