@@ -12,13 +12,13 @@ const TotalVoters = () => {
             <div className="box">
               <h4 className="text-white mb-2">Total Voters</h4>
               <div id="counter_1">
-                <AppCounter end={500} duration={200} />
+                <AppCounter end={500} duration={50} />
               </div>
             </div>
             <div className="box">
               <h4 className="text-white mb-2">Total Voters</h4>
               <div id="counter_2">
-                <AppCounter end={600} duration={100} />
+                <AppCounter end={600} duration={40} />
               </div>
             </div>
           </div>

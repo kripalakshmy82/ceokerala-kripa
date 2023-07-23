@@ -33,7 +33,10 @@ const NewsUpdate = () => {
                 <h2 className="site-heading">News and Updates</h2>
               </div>
             </div>
-            <Nav variant="underline" className="flex-block flex-block-links d-flex">
+            <Nav
+              variant="underline"
+              className="flex-block flex-block-links d-flex"
+            >
               {tabsNavigation.map(({ title, key }) => (
                 <Nav.Item key={key} className="position-relative">
                   <Nav.Link eventKey={key}>{title}</Nav.Link>
@@ -107,11 +110,7 @@ const NewsUpdate = () => {
           </ul>
         </div>
       </Container>
-      
-      
     </section>
-
-    
   );
 };
 

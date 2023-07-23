@@ -180,7 +180,7 @@ export const helpCardData = [
   {
     alt: "hello-voters",
     imgUrl: "./assets/hello-voters.png",
-    link: "#",
+    href: "#",
     heading: "Hello Voters",
     description:
       "The Election Commission of India, under its flagship voter awareness programme – SVEEP.",
@@ -188,7 +188,7 @@ export const helpCardData = [
   {
     alt: "e-EPIC",
     imgUrl: "./assets/e-epic.png",
-    link: "#",
+    href: "#",
     heading: "e-EPIC",
     description:
       "e-EPIC is a portable document format(PDF) version of the EPIC which can be downloaded.",
@@ -196,7 +196,7 @@ export const helpCardData = [
   {
     alt: "NVSP",
     imgUrl: "./assets/nvsp.png",
-    link: "#",
+    href: "#",
     heading: "NVSP",
     description:
       "India is a Socialist, Secular, Democratic Republic and the largest democracy in the World.",
@@ -204,7 +204,7 @@ export const helpCardData = [
   {
     alt: "CEO Kerala",
     imgUrl: "./assets/ceo.png",
-    link: "#",
+    href: "#",
     heading: "CEO Kerala",
     description:
       "On the other hand, Election to the Local Self Government bodies, the division of wards, reservation.",
