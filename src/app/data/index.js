@@ -282,3 +282,46 @@ export const galleryData = [
       "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
   },
 ];
+
+
+export const registerCardData = [
+  {
+    alt: "image",
+    iconUrl: "./gallery/gallery-1.jpg",
+    icon: "./assets/sveep.svg",
+    title: (
+      <>
+        Electors 
+        <br/>
+        Registration
+      </>
+    ),
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+  },
+  {
+    alt: "image",
+    iconUrl: "./gallery/gallery-2.jpg",
+    icon: "./assets/tweet.svg",
+    title: (
+      <>
+        Track your
+        <br/>
+        Registration Status
+      </>
+    ),
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+  },
+  {
+    alt: "image",
+    iconUrl: "./gallery/gallery-1.jpg",
+    icon: "./assets/media.svg",
+    title: (
+      <>
+        Online forms for 
+        <br/>
+        Registration in E-roll
+      </>
+    ),
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+  },
+]

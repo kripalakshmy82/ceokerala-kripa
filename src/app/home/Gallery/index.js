@@ -19,7 +19,7 @@ const GalleryCard = ({ imgUrl, alt, href, heading, description, type }) => {
     <div className="card card-item theme-card overflow-hidden border-0 shadow-sm position-relative">
       <img src={imgUrl} className="card-img-top" alt={alt} />
       {type === "videos" && <span className="m-auto d-block position-absolute video-icon"><svg viewBox="0 0 24 24" width="24" height="24" stroke="#5f4bdb" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="css-i6dzq1"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></span>}
-      <div className="card-body theme-gap">
+      <div className="card-body p-5 theme-gap">
         <h5 className="card-title">
           <a
             href={href}

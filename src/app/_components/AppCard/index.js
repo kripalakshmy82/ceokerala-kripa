@@ -5,7 +5,7 @@ import classNames from "classnames";
 
 const AppCard = ({ className = "", children }) => {
   const appCardClassNames = classNames({
-    "card-item rounded-theme shadow-sm flex-fill border-0 text-left": true,
+    "card-item rounded-theme shadow-sm flex-fill border-0 p-0 text-left": true,
     [className]: className !== "",
   });
 
@@ -28,7 +28,7 @@ const InfoCard = ({
   className = "",
 }) => {
   const titleClassName = classNames({
-    "d-flex gap-5": cardTitleDir === "row",
+    "d-flex gap-4": cardTitleDir === "row",
   });
 
   const iconWrapperClassName = classNames({
@@ -43,7 +43,7 @@ const InfoCard = ({
   return (
     <AppCard className={className}>
       {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
-      <Card.Body>
+      <Card.Body className="p-0">
         <Card.Title className={titleClassName}>
           {iconUrl && (
             <span className={iconWrapperClassName}>
@@ -52,21 +52,21 @@ const InfoCard = ({
           )}
           <h3 className="mb-3">{title}</h3>
         </Card.Title>
-        <Card.Text>
-          <p className="mb-0">{description}</p>
-          {link && (
-            <a href={link} className="stretched-link">
-              Iam link component
-            </a>
-          )}
-        </Card.Text>
+        <Card.Text className="mb-0">{description}</Card.Text>
       </Card.Body>
+      {link && (
+        <a
+          href={link}
+          className="stretched-link"
+        >
+        </a>
+      )}
     </AppCard>
   );
 };
 
 InfoCard.propTypes = {
-  title: string.isRequired,
+  title: node,
   description: string.isRequired,
   cardTitleDir: oneOf(["column", "row"]),
   iconWidth: oneOf(["full", "none"]),

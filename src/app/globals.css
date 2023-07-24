@@ -421,12 +421,42 @@ footer {
   color: var(--color-dark-light);
   border-bottom-color: var(--bg-green)
 }
+.link-btn {
+  right: 15px;
+  opacity: 0;
+  bottom: 15px;
+  visibility: hidden;
+}
+.card-item:hover .link-btn {
+  visibility: visible;
+  opacity: 1;
+  animation-name: appear;
+  animation-duration: 500ms;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    display: inline-block;
+    visibility: visible;
+  }
+}
+.detail-banner .breadcrumb {
+  margin: var(--zero);
+  justify-content: center;
+}
+.banner-title span {
+  color: var(--color-blue);
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
-
-@media screen and (max-width: 767px) {
 }
