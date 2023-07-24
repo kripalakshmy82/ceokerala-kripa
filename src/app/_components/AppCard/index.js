@@ -1,11 +1,18 @@
-import { string, node, shape, oneOf } from "prop-types";
+import { string, node, bool, shape, oneOf } from "prop-types";
 import { Card } from "react-bootstrap";
 
 import classNames from "classnames";
 
-const AppCard = ({ className = "", children }) => {
+const AppCard = ({
+  className = "",
+  isShadow = false,
+  cardType = "default",
+  children,
+}) => {
   const appCardClassNames = classNames({
-    "card-item rounded-theme shadow-sm flex-fill border-0 p-0 text-left": true,
+    "rounded-theme flex-fill border-0 p-0 text-left": true,
+    "shadow-lg": isShadow,
+    "card-item shadow-sm": cardType === "hover",
     [className]: className !== "",
   });
 
@@ -14,7 +21,9 @@ const AppCard = ({ className = "", children }) => {
 
 AppCard.propTypes = {
   className: string,
-  children: node,
+  cardType: oneOf(["hover", "default"]),
+  isShadow: bool,
+  children: node.isRequired,
 };
 
 const InfoCard = ({
@@ -41,7 +50,7 @@ const InfoCard = ({
   });
 
   return (
-    <AppCard className={className}>
+    <AppCard className={className} cardType="hover">
       {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
       <Card.Body className="p-0">
         <Card.Title className={titleClassName}>
@@ -54,13 +63,7 @@ const InfoCard = ({
         </Card.Title>
         <Card.Text className="mb-0">{description}</Card.Text>
       </Card.Body>
-      {link && (
-        <a
-          href={link}
-          className="stretched-link"
-        >
-        </a>
-      )}
+      {link && <a href={link} className="stretched-link"></a>}
     </AppCard>
   );
 };
@@ -79,4 +82,5 @@ InfoCard.propTypes = {
   className: string,
 };
 
-export { AppCard, InfoCard };
+export default AppCard;
+export { InfoCard };

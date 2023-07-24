@@ -1,24 +1,34 @@
 "use client";
 
 import { Container, Tab, Nav } from "react-bootstrap";
-import { newsUpdate } from "@/app/data";
 
+import TabItemComponent from "./shared/TabComponent";
+
+// declared the tab navigation
 const tabsNavigation = [
   {
     key: "latest-news",
     title: "Latest News",
+    component: <TabItemComponent />
   },
   {
     key: "current-update",
     title: "Current Update",
+    component: <TabItemComponent />
   },
   {
     key: "important-info",
     title: "Important Info",
+    component: <TabItemComponent />
   },
 ];
 
+
+// check reduce to manipulate obj
+
+
 const NewsUpdate = () => {
+
   return (
     <section className="latest-news">
       <Container>
@@ -45,27 +55,9 @@ const NewsUpdate = () => {
             </Nav>
           </div>
           <Tab.Content>
-            {tabsNavigation.map(({ key }, idx) => (
+            {tabsNavigation.map(({ key, component: TabItemComponent }, idx) => (
               <Tab.Pane eventKey={key} key={idx}>
-                {newsUpdate.map(({ heading, description, href }, key) => (
-                  <div
-                    key={key}
-                    className="news-item-section d-flex flex-lg-row flex-md-row flex-sm-column flex-column justify-content-between align-items-center shadow rounded-theme p-5 mb-3"
-                  >
-                    <div className="flex-news-item">
-                      <h4>{heading}</h4>
-                      <small>{description}</small>
-                    </div>
-                    <div className="flex-news-btn">
-                      <a
-                        href={href}
-                        className="theme-btn-component btn-theme border-theme"
-                      >
-                        Read more
-                      </a>
-                    </div>
-                  </div>
-                ))}
+                {TabItemComponent}
               </Tab.Pane>
             ))}
           </Tab.Content>

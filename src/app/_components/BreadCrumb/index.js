@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import { Breadcrumb } from "react-bootstrap";
 
 const AppBreadCrumb = ({ href, currentTitle }) => {
