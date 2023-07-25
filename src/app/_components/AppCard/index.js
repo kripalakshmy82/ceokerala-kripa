@@ -52,14 +52,14 @@ const InfoCard = ({
   return (
     <AppCard className={className} cardType="hover">
       {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
-      <Card.Body className="p-0">
+      <Card.Body className="p-4">
         <Card.Title className={titleClassName}>
           {iconUrl && (
             <span className={iconWrapperClassName}>
               <img src={iconUrl} className={iconClassName} />
             </span>
           )}
-          <h3 className="mb-3">{title}</h3>
+          <h4 className="mb-3">{title}</h4>
         </Card.Title>
         <Card.Text className="mb-0">{description}</Card.Text>
       </Card.Body>
@@ -70,7 +70,7 @@ const InfoCard = ({
 
 InfoCard.propTypes = {
   title: node,
-  description: string.isRequired,
+  description: string,
   cardTitleDir: oneOf(["column", "row"]),
   iconWidth: oneOf(["full", "none"]),
   img: shape({

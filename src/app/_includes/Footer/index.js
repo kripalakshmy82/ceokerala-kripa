@@ -136,7 +136,7 @@ const Footer = () => {
       </Container>
       <div className="foot-sub py-4 mt-5">
         <Container>
-          <p className="mb-0 text-white text-center">Developed &amp; Maintained by <a href="#" target="_blank" className="text-warning">Invis Pvt.Ltd</a> </p>
+          <p className="mb-0 text-white text-center">Developed &amp; Maintained by <a href="#" target="_blank" className="text-warning">Invis</a> </p>
         </Container>
       </div>
     </footer>

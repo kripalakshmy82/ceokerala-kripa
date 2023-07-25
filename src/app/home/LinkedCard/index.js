@@ -12,7 +12,7 @@ const LinkedCard = () => {
             ({ href, imgUrl: iconUrl, heading, description }, key) => (
               <InfoCard
                 key={key}
-                className="p-5"
+                className="p-2"
                 title={heading}
                 description={description}
                 cardTitleDir="column"

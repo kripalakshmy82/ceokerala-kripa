@@ -18,7 +18,7 @@ const HelpCard = () => {
             ({ imgUrl: iconUrl, heading, description, href }, key) => (
               <InfoCard
                 key={key}
-                className="p-4"
+                className="p-0"
                 title={heading}
                 description={description}
                 cardTitleDir="column"

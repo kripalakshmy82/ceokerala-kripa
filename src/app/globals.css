@@ -455,6 +455,9 @@ footer {
 .banner-title span {
   color: var(--color-blue);
 }
+.section-block-md-end {
+  padding-bottom: 120px;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

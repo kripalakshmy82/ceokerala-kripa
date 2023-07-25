@@ -275,7 +275,7 @@ export const galleryData = [
   {
     alt: "",
     href: "#",
-    imgUrl: "./gallery/gallery-1.jpg",
+    imgUrl: "./gallery/gallery-3.jpg",
     heading:
       "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
     description:
@@ -283,45 +283,105 @@ export const galleryData = [
   },
 ];
 
-
 export const registerCardData = [
   {
     alt: "image",
-    iconUrl: "./gallery/gallery-1.jpg",
-    icon: "./assets/sveep.svg",
+    imgUrl: "./assets/sveep.svg",
+    img: {
+      url: "./gallery/gallery-1.jpg",
+      alt: "image",
+    },
     title: (
       <>
-        Electors 
-        <br/>
+        Electors
+        <br />
         Registration
       </>
     ),
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
   },
   {
     alt: "image",
-    iconUrl: "./gallery/gallery-2.jpg",
-    icon: "./assets/tweet.svg",
+    imgUrl: "./assets/tweet.svg",
+    img: {
+      url: "./gallery/gallery-2.jpg",
+      alt: "image",
+    },
     title: (
       <>
         Track your
-        <br/>
+        <br />
         Registration Status
       </>
     ),
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
   },
   {
     alt: "image",
-    iconUrl: "./gallery/gallery-1.jpg",
-    icon: "./assets/media.svg",
+    imgUrl: "./assets/media.svg",
+    img: {
+      url: "./gallery/gallery-3.jpg",
+      alt: "image",
+    },
     title: (
       <>
-        Online forms for 
-        <br/>
+        Online forms for
+        <br />
         Registration in E-roll
       </>
     ),
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
   },
-]
+];
+
+export const infoCardData = [
+  {
+    alt: "image",
+    imgUrl: "./assets/icon-home.png",
+    title: (
+      <>
+        Know your
+        <br />
+        Polling Booth
+      </>
+    ),
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+  },
+  {
+    alt: "image",
+    imgUrl: "./assets/icon-avatar.png",
+    title: (
+      <>
+        Know your
+        <br />
+        Booth Level Officers (BLO)
+      </>
+    ),
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+  },
+];
+
+export const externalCardData = [
+  {
+    title: "Electoral roll Continuous Updating with Suppliment",
+    img: {
+      url: "./gallery-ext/img1.jpg",
+      alt: "image",
+    },
+    link: "#",
+  },
+
+  {
+    title: "Search in Enroll Roll",
+    img: {
+      url: "./gallery-ext/img2.jpg",
+      alt: "image",
+    },
+    link: "#",
+  },
+];
