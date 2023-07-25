@@ -2,29 +2,30 @@
 
 import { Container, Card } from "react-bootstrap";
 import AppCounter from "@/app/_components/AppCounter";
+import { AppBox, AppSection, AppText } from "@/app/_components";
 
 const TotalVoters = () => {
   return (
-    <section className="total-voters section-block-sm">
+    <AppSection id="voters-count" className="total-voters section-block-sm">
       <Container>
         <Card className="counter-card card-item theme-card p-5">
-          <div className="d-flex flex-row justify-content-center gap-5 align-items-center text-center">
-            <div className="box">
-              <h4 className="text-white mb-2">Total Voters</h4>
-              <div id="counter_1">
-                <AppCounter end={500} duration={50} />
-              </div>
-            </div>
-            <div className="box">
-              <h4 className="text-white mb-2">Total Voters</h4>
-              <div id="counter_2">
-                <AppCounter end={600} duration={40} />
-              </div>
-            </div>
-          </div>
+          <AppBox className="d-flex flex-row justify-content-center gap-5 align-items-center text-center">
+            <AppBox className="box">
+              <AppText
+                render={() => <h4 className="text-white mb-2">Total Voters</h4>}
+              ></AppText>
+              <AppCounter end={500} duration={50} />
+            </AppBox>
+            <AppBox className="box">
+              <AppText
+                render={() => <h4 className="text-white mb-2">New Voters</h4>}
+              ></AppText>
+              <AppCounter end={600} duration={40} />
+            </AppBox>
+          </AppBox>
         </Card>
       </Container>
-    </section>
+    </AppSection>
   );
 };
 

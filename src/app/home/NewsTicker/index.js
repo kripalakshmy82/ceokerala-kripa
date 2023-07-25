@@ -17,13 +17,13 @@ const AppTicker = () => {
             pauseOnHover="true"
             speed="50"
             direction="left"
-            //gradient="true"
-            //gradientColor={[255, 255, 255]}
           >
             {newsContent.map(({ description }, key) => (
               <div className="marquee-item" key={key}>
                 <span className="marquee-seperator mx-3">+++</span>
-                {description}
+                <a href="#">
+                  {description}
+                </a>
               </div>
             ))}
           </Marquee>
