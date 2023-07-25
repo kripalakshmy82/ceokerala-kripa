@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
+import classNames from "classnames";
 
-import { AppBox } from "@/app/_components";
+import { AppBox, AppCard, AppText, AppButton } from "@/app/_components";
 
 import { newsUpdate } from "@/app/data";
 
@@ -54,23 +55,33 @@ function Pagination() {
   );
 }
 
-const TabContentComponent = ({ heading, description, href }) => {
+const NewsListItem = ({ heading, description, href }) => {
+  const newsListItemcx = classNames({
+    "p-5 mb-3": true,
+    "d-flex flex-lg-row flex-md-row flex-sm-column flex-column": true,
+    "justify-content-between align-items-center": true,
+  });
+
   return (
-    <div className="news-item-section d-flex flex-lg-row flex-md-row flex-sm-column flex-column justify-content-between align-items-center shadow rounded-theme p-5 mb-3">
-      <div className="flex-news-item">
-        <h4>{heading}</h4>
-        <small>{description}</small>
-      </div>
-      <div className="flex-news-btn">
-        <a href={href} className="theme-btn-component btn-theme border-theme">
-          Read more
-        </a>
-      </div>
-    </div>
+    <AppCard className={newsListItemcx} isShadow>
+      <AppBox className="news-info">
+        <AppText
+          render={() => (
+            <>
+              <h4>{heading}</h4>
+              <small>{description}</small>
+            </>
+          )}
+        />
+      </AppBox>
+      <AppBox className="news-read-more">
+        <AppButton variant="themeBtn" title="Read more" href={href} />
+      </AppBox>
+    </AppCard>
   );
 };
 
-const TabItemComponent = ({ activeKey }) => {
+const NewsList = ({ activeKey }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -89,7 +100,7 @@ const TabItemComponent = ({ activeKey }) => {
       ) : (
         <>
           {newsUpdate.map((news, key) => (
-            <TabContentComponent {...news} key={key} />
+            <NewsListItem {...news} key={key} />
           ))}
           <Pagination />
         </>
@@ -98,4 +109,4 @@ const TabItemComponent = ({ activeKey }) => {
   );
 };
 
-export default TabItemComponent;
+export default NewsList;
