@@ -1,25 +1,79 @@
+import { useState, useContext, createContext } from "react";
+import { arrayOf, node, oneOf, shape, string, func } from "prop-types";
+import { Tab, Nav } from "react-bootstrap";
 
+const TabContext = createContext({});
 
-// Children, id
-// activeKey - string
-// id - string
-function AppTabContainer ({ children, activeKey, id }) {
-    return (
-        <p>Tab Container With Children</p>
-    )
+function AppTabContainer({ children, id }) {
+  const [activeTabID, setActiveTabID] = useContext(TabContext);
+
+  return (
+    <Tab.Container
+      onSelect={(eventKey) => setActiveTabID(eventKey)}
+      id={id}
+      defaultActiveKey={activeTabID}
+      unmountOnExit
+    >
+      {children}
+    </Tab.Container>
+  );
+}
+
+AppTabContainer.propTypes = {
+  children: node.isRequired,
+  id: string.isRequired,
 };
 
-// props - navigation data 
-// Proptype - Array of object with shape title,key
-function AppTabNavigation ({ data }) {
-    return (
-       <p>Nav Tabs</p>
-    );
+function AppTabNavigation({ data, variant = "tabs", className }) {
+  return (
+    <Nav variant={variant} className={className}>
+      {data.map(({ title, key }) => (
+        <Nav.Item key={key} className="position-relative">
+          <Nav.Link eventKey={key}>{title}</Nav.Link>
+        </Nav.Item>
+      ))}
+    </Nav>
+  );
+}
+
+AppTabNavigation.propTypes = {
+  data: arrayOf(
+    shape({
+      title: string.isRequired,
+      key: string.isRequired,
+    })
+  ),
+  variant: oneOf(["tabs", "underline", "pills"]),
+  className: string.isRequired,
 };
 
-// data : key, component
-function AppTabContent ({ data }) {
-    return (
-        <p>Tab content Tab Pain</p>
-    )
+function AppTabContent({ render }) {
+  const [activeTabID] = useContext(TabContext);
+
+  return (
+    <Tab.Content>
+      <Tab.Pane eventKey={activeTabID}>{render(activeTabID)}</Tab.Pane>
+    </Tab.Content>
+  );
+}
+
+AppTabContent.propTypes = {
+  render: func.isRequired,
 };
+
+function AppTabSwitcher({ activeKey, children }) {
+  const [activeTabID, setActiveTabID] = useState(activeKey);
+  return (
+    <TabContext.Provider value={[activeTabID, setActiveTabID]}>
+      {children}
+    </TabContext.Provider>
+  );
+}
+
+AppTabSwitcher.propTypes = {
+  activeKey: string.isRequired,
+  children: node.isRequired,
+};
+
+export default AppTabSwitcher;
+export { AppTabContainer, AppTabNavigation, AppTabContent };
