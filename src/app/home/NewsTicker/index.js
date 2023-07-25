@@ -3,34 +3,42 @@
 import Marquee from "react-fast-marquee";
 
 import { Container } from "react-bootstrap";
+import { AppBox, AppText } from "@/app/_components";
+
 import { newsContent } from "@/app/data";
 
-const AppTicker = () => {
+const MarqueeItem = ({ info }) => {
   return (
-    <div className="news-scroll mtl-lg-5 mt-md-5 mt-sm-4 mt-3">
-      <Container>
-        <div className="d-flex align-items-center">
-          <div className="title-text pe-3 me-3 position-relative">
-            <h5 className="bold mb-0">Updates</h5>
-          </div>
-          <Marquee
-            pauseOnHover="true"
-            speed="50"
-            direction="left"
-          >
-            {newsContent.map(({ description }, key) => (
-              <div className="marquee-item" key={key}>
-                <span className="marquee-seperator mx-3">+++</span>
-                <a href="#">
-                  {description}
-                </a>
-              </div>
-            ))}
-          </Marquee>
-        </div>
-      </Container>
-    </div>
+    <AppBox className="marquee-item">
+      <AppText
+        render={() => (
+          <>
+            <span className="marquee-seperator mx-3">+++</span>
+            <a href="#">{info}</a>
+          </>
+        )}
+      />
+    </AppBox>
   );
 };
 
-export default AppTicker;
+function NewsTicker() {
+  return (
+    <AppBox className="news-scroll mtl-lg-5 mt-md-5 mt-sm-4 mt-3">
+      <Container>
+        <AppBox className="d-flex align-items-center">
+          <AppBox className="title-text pe-3 me-3 position-relative">
+            <AppText render={() => <h5 className="bold mb-0">Updates</h5>} />
+          </AppBox>
+          <Marquee pauseOnHover="true" speed="50" direction="left">
+            {newsContent.map((info, key) => (
+              <MarqueeItem info={info} key={key} />
+            ))}
+          </Marquee>
+        </AppBox>
+      </Container>
+    </AppBox>
+  );
+}
+
+export default NewsTicker;

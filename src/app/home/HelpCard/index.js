@@ -1,23 +1,28 @@
 "use client";
+
+import classNames from "classnames";
+
 import { Container, Col } from "react-bootstrap";
 
-import { InfoCard } from "@/app/_components/AppCard";
-
+import { InfoCard, AppSection } from "@/app/_components";
 import { helpCardData } from "@/app/data";
 
-// Change imgUrl to iconUrl
-// no need of alt while icon url provided
-// create link shape obj
-
 const HelpCard = () => {
+  const colCx = classNames({
+    "d-flex": true,
+    "gap-4": true,
+    "flex-column flex-lg-row flex-md-row flex-sm-column": true,
+    "justify-content-between align-items-center": true,
+  });
+
   return (
-    <section className="help-card-section section-block-lg">
+    <AppSection id="help-card" className="help-card-section section-block-lg">
       <Container>
-        <Col className="d-flex gap-4 flex-lg-row flex-md-row flex-sm-column flex-column justify-content-between align-items-center">
+        <Col className={colCx}>
           {helpCardData.map(
-            ({ imgUrl: iconUrl, heading, description, href }, key) => (
+            ({ id, iconUrl, heading, description, href }) => (
               <InfoCard
-                key={key}
+                key={id}
                 className="p-0"
                 title={heading}
                 description={description}
@@ -30,7 +35,7 @@ const HelpCard = () => {
           )}
         </Col>
       </Container>
-    </section>
+    </AppSection>
   );
 };
 

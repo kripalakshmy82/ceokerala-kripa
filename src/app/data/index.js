@@ -1,5 +1,6 @@
 export const sliderData = [
   {
+    id: 1,
     heading: (
       <>
         Welcome to <span>the Chief Electoral</span> Officer Kerala(1)
@@ -10,13 +11,25 @@ export const sliderData = [
         form, by injected humour, or randomised words which don't
         look even slightly believable.`,
     href: "#",
-    alt: "images",
-    circleImgOne: "./slider-img/spot-img1.jpg",
-    circleImgTwo: "./slider-img/spot-img2.jpg",
-    circleImgThree: "./slider-img/spot-img3.jpg",
-    circleImgFour: "./slider-img/spot-img4.jpg",
+    img_one: {
+      url: "./slider-img/spot-img1.jpg",
+      alt: "spot-image-1",
+    },
+    img_two: {
+      url: "./slider-img/spot-img2.jpg",
+      alt: "spot-image-2",
+    },
+    img_three: {
+      url: "./slider-img/spot-img3.jpg",
+      alt: "spot-image-3",
+    },
+    image_four: {
+      url: "./slider-img/spot-img4.jpg",
+      alt: "spot-image-4",
+    },
   },
   {
+    id: 2,
     heading: (
       <>
         Welcome to <span>the Chief Electoral</span> Officer Kerala(2)
@@ -27,27 +40,31 @@ export const sliderData = [
     form, by injected humour, or randomised words which don't
     look even slightly believable.`,
     href: "#",
-    alt: "images",
-    circleImgOne: "./slider-img/spot-img1.jpg",
-    circleImgTwo: "./slider-img/spot-img2.jpg",
-    circleImgThree: "./slider-img/spot-img3.jpg",
-    circleImgFour: "./slider-img/spot-img4.jpg",
+    img_one: {
+      url: "./slider-img/spot-img1.jpg",
+      alt: "spot-image-1",
+    },
+    img_two: {
+      url: "./slider-img/spot-img2.jpg",
+      alt: "spot-image-2",
+    },
+    img_three: {
+      url: "./slider-img/spot-img3.jpg",
+      alt: "spot-image-3",
+    },
+    image_four: {
+      url: "./slider-img/spot-img4.jpg",
+      alt: "spot-image-4",
+    },
   },
 ];
 
 export const newsContent = [
-  {
-    description: `I can be a React component, multiple React components, or just some
-    text.`,
-  },
-  {
-    description: `I can be a React component, multiple React components, or just some
-    text.`,
-  },
-  {
-    description: `I can be a React component, multiple React components, or just some
-    text.`,
-  },
+  "I can be a React component, multiple React components, or just some text.",
+  "I can be a React component, multiple React components, or just some text.",
+  "I can be a React component, multiple React components, or just some text.",
+  "I can be a React component, multiple React components, or just some text.",
+  "I can be a React component, multiple React components, or just some text.",
 ];
 
 export const socialLinks = [
@@ -178,36 +195,36 @@ export const boardTeamData = [
 
 export const helpCardData = [
   {
-    alt: "hello-voters",
-    imgUrl: "./assets/hello-voters.png",
+    id: 1,
+    iconUrl: "./assets/hello-voters.png",
     href: "#",
     heading: "Hello Voters",
     description:
       "The Election Commission of India, under its flagship voter awareness programme – SVEEP.",
   },
   {
-    alt: "e-EPIC",
-    imgUrl: "./assets/e-epic.png",
-    href: "#",
+    id: 2,
     heading: "e-EPIC",
     description:
       "e-EPIC is a portable document format(PDF) version of the EPIC which can be downloaded.",
+    iconUrl: "./assets/e-epic.png",
+    href: "#",
   },
   {
-    alt: "NVSP",
-    imgUrl: "./assets/nvsp.png",
-    href: "#",
+    id: 3,
     heading: "NVSP",
     description:
       "India is a Socialist, Secular, Democratic Republic and the largest democracy in the World.",
+    iconUrl: "./assets/nvsp.png",
+    href: "#",
   },
   {
-    alt: "CEO Kerala",
-    imgUrl: "./assets/ceo.png",
-    href: "#",
+    id: 4,
     heading: "CEO Kerala",
     description:
       "On the other hand, Election to the Local Self Government bodies, the division of wards, reservation.",
+    iconUrl: "./assets/ceo.png",
+    href: "#",
   },
 ];
 
@@ -231,25 +248,28 @@ export const newsUpdate = [
 
 export const linkedCardData = [
   {
-    href: "#",
-    imgUrl: "./assets/sveep.svg",
+    id: 1,
     heading: "SVEEP",
     description: `SVEEP is the flagship program of the Election Commission of India
     for voter education, spreading voter awareness and promoting.`,
+    href: "#",
+    iconUrl: "./assets/sveep.svg",
   },
   {
-    href: "#",
-    imgUrl: "./assets/tweet.svg",
+    id: 2,
     heading: "Tweets",
     description: `Official Twitter handle of The Chief Electoral Officer, Kerala.
     Conducting free and fair election and enrolling every eligible person.`,
+    href: "#",
+    iconUrl: "./assets/tweet.svg",
   },
   {
-    href: "#",
-    imgUrl: "./assets/media.svg",
+    id: 3,
     heading: "Media & Publications",
     description: `ECI Publications and data collection fuels the Election Commission
     of India's mission to improve voter experience and support.`,
+    href: "#",
+    iconUrl: "./assets/media.svg",
   },
 ];
 
