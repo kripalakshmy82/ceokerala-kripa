@@ -9,7 +9,7 @@ import AppTabSwitcher, {
   AppTabContent,
 } from "@/app/_components/AppTab";
 
-import TabItemComponent from "./shared/TabComponent";
+import NewsList from "./shared/NewsList";
 
 // news tab navigation
 const newsTabNavigation = [
@@ -67,7 +67,7 @@ const NewsUpdate = () => {
             </AppBox>
             <AppTabContent
               render={(activeTabID) => (
-                <TabItemComponent activeKey={activeTabID} />
+                <NewsList activeKey={activeTabID} />
               )}
             />
           </AppTabContainer>
