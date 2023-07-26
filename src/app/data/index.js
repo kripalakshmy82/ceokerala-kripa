@@ -405,3 +405,10 @@ export const externalCardData = [
     link: "#",
   },
 ];
+
+export const promoCardData = {
+  img: {
+    url: "./promotion/promoBg.png",
+    alt: "promotion",
+  },
+};

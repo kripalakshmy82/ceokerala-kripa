@@ -44,7 +44,7 @@ function Pagination() {
         </li>
         <li className="page-item">
           <a className="page-link border-0" href="#">
-            Next{" "}
+            Next
             <i>
               <img src="./icons/chevron-right.svg" alt="" />
             </i>

@@ -10,7 +10,7 @@ const AppCard = ({
   children,
 }) => {
   const appCardClassNames = classNames({
-    "rounded-theme flex-fill border-0 p-0 text-left": true,
+    "rounded-theme flex-fill border-0 p-0 text-left bg-transparent": true,
     "shadow-lg": isShadow,
     "card-item shadow-sm": cardType === "hover",
     [className]: className !== "",
@@ -24,6 +24,31 @@ AppCard.propTypes = {
   cardType: oneOf(["hover", "default"]),
   isShadow: bool,
   children: node.isRequired,
+};
+
+const PromoCard = ({ bgColor = "", img, type = "promo" }) => {
+  const promoCardClassName = classNames({
+    "bg-blue": bgColor === "#5f4bdb",
+  });
+
+  return (
+    <AppCard className={promoCardClassName} cardType="default">
+      {type === "promo" ? (
+        img && <Card.Img variant="top" src={img.url} alt={img.alt} />
+      ) : (
+        <p>counter card</p>
+      )}
+    </AppCard>
+  );
+};
+
+PromoCard.propTypes = {
+  img: shape({
+    url: string,
+    alt: string,
+  }),
+  type: oneOf(["promo", "counter"]),
+  bgColor: string,
 };
 
 const InfoCard = ({
@@ -83,4 +108,4 @@ InfoCard.propTypes = {
 };
 
 export default AppCard;
-export { InfoCard };
+export { InfoCard, PromoCard };
