@@ -26,6 +26,7 @@ const EnrollUpdation = () => {
                 iconUrl={rollUpdateData.imgUrl}
                 title={rollUpdateData.title}
                 cardTitleDir="row"
+                className="align-items-center"
                 description={rollUpdateData.description}
               />
             </Col>

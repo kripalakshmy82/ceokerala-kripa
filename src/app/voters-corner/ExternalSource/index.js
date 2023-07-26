@@ -14,15 +14,9 @@ const ExternalSource = () => {
       <AppBox className="external-source-box">
         <Container>
           <Row>
-            {externalCardData.map(({ alt, title, img, link }, key) => (
+            {externalCardData.map(({ ...rest }, key) => (
               <Col lg={6} md={6} sm={12} xs={12} key={key}>
-                <InfoCard
-                  alt={alt}
-                  title={title}
-                  link={link}
-                  img={img}
-                  className="theme-card overflow-hidden"
-                />
+                <InfoCard {...rest} className="theme-card overflow-hidden" />
               </Col>
             ))}
           </Row>

@@ -18,6 +18,8 @@
   --font-extra-bold: 700;
   --base-font-size: 18px;
   --head-font-size: 52px;
+  --head-font-size-md: 40px;
+  --head-font-size-sm: 32px;
   --sub-head-font-size: 26px;
   --content: "";
   --zero: 0;
@@ -465,5 +467,31 @@ footer {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-brand, .foot-logo {
+    width: 220px;
+  }
+  .spotlight .content h2 {
+    font-size: var(--head-font-size-sm);
+  }
+  .spotlight.section-block-sm {
+    padding: 50px 0 50px;
+  }
+  .voter-h-card-sec {
+    top: 0;
+  }
+  .carousel .slide {
+    padding-bottom: 50px;
+  }
+  .social-icon .icon {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+  .section-block-md {
+    padding: 60px 0;
   }
 }

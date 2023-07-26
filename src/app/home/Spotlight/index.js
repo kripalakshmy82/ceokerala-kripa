@@ -21,7 +21,7 @@ const AppSliderIntro = ({ heading, description, href }) => {
         render={() => (
           <>
             <h2 className="mb-lg-4 mb-md-4 mb-sm-3 mb-3">{heading}</h2>
-            <p className="mb-5">{description}</p>
+            <p className="mb-lg-5 mb-md-3 mb-sm-3 mb-3">{description}</p>
           </>
         )}
       />

@@ -24,7 +24,7 @@ const MarqueeItem = ({ info }) => {
 
 function NewsTicker() {
   return (
-    <AppBox className="news-scroll mtl-lg-5 mt-md-5 mt-sm-4 mt-3">
+    <AppBox className="news-scroll mt-lg-5 mt-md-5 mt-sm-4 mt-4">
       <Container>
         <AppBox className="d-flex align-items-center">
           <AppBox className="title-text pe-3 me-3 position-relative">

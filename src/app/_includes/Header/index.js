@@ -55,9 +55,10 @@ const Header = () => {
               </svg>
             </i>
           </Button>
+          <AppCanvas show={show} onHide={handleClose} />
         </AppNav>
       </header>
-      <AppCanvas show={show} onHide={handleClose} />
+      
     </>
   );
 };

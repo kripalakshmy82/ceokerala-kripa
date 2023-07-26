@@ -67,7 +67,7 @@ const InfoCard = ({
   className = "",
 }) => {
   const titleClassName = classNames({
-    "d-flex gap-4": cardTitleDir === "row",
+    "d-flex gap-4 align-items-center": cardTitleDir === "row",
   });
 
   const iconWrapperClassName = classNames({
@@ -91,7 +91,7 @@ const InfoCard = ({
           )}
           <h4 className="mb-3">{title}</h4>
         </Card.Title>
-        <Card.Text className="mb-0">{description}</Card.Text>
+        <Card.Text className="mb-0 d-flex">{description}</Card.Text>
       </Card.Body>
       {link && <a href={link} className="stretched-link"></a>}
     </AppCard>
