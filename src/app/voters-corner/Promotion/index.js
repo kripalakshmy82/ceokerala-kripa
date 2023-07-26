@@ -12,7 +12,7 @@ const Promotion = () => {
       <Container>
         <Row>
           <Col lg={12}>
-            <PromoCard type="counter" img={promoCardData.img} />
+            <PromoCard type="promo" img={promoCardData.img} />
           </Col>
         </Row>
       </Container>

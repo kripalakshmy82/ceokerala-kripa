@@ -2,6 +2,7 @@ import { string, node, bool, shape, oneOf } from "prop-types";
 import { Card } from "react-bootstrap";
 
 import classNames from "classnames";
+import { AppBox } from "../Elements";
 
 const AppCard = ({
   className = "",
@@ -26,18 +27,21 @@ AppCard.propTypes = {
   children: node.isRequired,
 };
 
-const PromoCard = ({ bgColor = "", img, type = "promo" }) => {
-  const promoCardClassName = classNames({
-    "bg-blue": bgColor === "#5f4bdb",
+const PromoCard = ({ className = "", img, type = "promo" }) => {
+  const demoClassName = classNames({
+    "bg-theme": true,
+    "rounded-5": true,
+    "d-flex justify-content-center align-items-center": true,
   });
-
   return (
-    <AppCard className={promoCardClassName} cardType="default">
-      {type === "promo" ? (
-        img && <Card.Img variant="top" src={img.url} alt={img.alt} />
-      ) : (
-        <p>counter card</p>
-      )}
+    <AppCard className={className} cardType="default">
+      <AppBox className={demoClassName}>
+        {type === "promo" ? (
+          img && <Card.Img variant="top" src={img.url} alt={img.alt} />
+        ) : (
+          <p>counter card</p>
+        )}
+      </AppBox>
     </AppCard>
   );
 };
@@ -48,7 +52,8 @@ PromoCard.propTypes = {
     alt: string,
   }),
   type: oneOf(["promo", "counter"]),
-  bgColor: string,
+  bgColor: bool,
+  className: string,
 };
 
 const InfoCard = ({

@@ -54,6 +54,9 @@ a:focus,
 .nav-link:focus-visible {
   box-shadow: none;
 }
+.bg-theme {
+  background-color: var(--theme-bg-color);
+}
 .video-icon {
   top: 30%;
   width: 44px;
@@ -410,7 +413,8 @@ footer {
 }
 .flex-block-links.nav-pills .nav-link.active {
   border: 1px solid var(--theme-bg-color);
-  background-color: transparent;color: var(--color-dark);
+  background-color: transparent;
+  color: var(--color-dark);
 } 
 .nav-underline .nav-link {
   color: var(--theme-bg-color);
