@@ -432,3 +432,4 @@ export const eHistoryBnrData = {
   ),
   currentTitle: "election-history",
 };
+

@@ -8,7 +8,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { AppSection, AppButton, AppBox, AppText } from "@/app/_components";
 
 import NewsTicker from "@/app/home/NewsTicker";
-
 import { sliderData } from "@/app/data";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -40,7 +39,7 @@ const AppSliderIntro = ({ heading, description, href }) => {
 AppSliderIntro.propTypes = {
   heading: element.isRequired,
   description: string.isRequired,
-  href: string.isRequired
+  href: string.isRequired,
 };
 
 // Slider spot png obj component
@@ -54,17 +53,11 @@ const SliderSpotObj = ({ url, idx }) => {
 
 SliderSpotObj.propTypes = {
   url: string.isRequired,
-  idx: number.isRequired
+  idx: number.isRequired,
 };
 
 // Slider Campaign Image component
-const SliderCampaginImage = ({
-  url,
-  alt,
-  idx,
-  floating = false,
-  size,
-}) => {
+const SliderCampaginImage = ({ url, alt, idx, floating = false, size }) => {
   const wrapperCx = classNames({
     "campign-item d-block": true,
     [`campign-item-${idx}`]: true,
@@ -85,8 +78,8 @@ SliderCampaginImage.propTypes = {
   alt: string.isRequired,
   idx: number.isRequired,
   floating: bool,
-  size: oneOf(["sm", "md", "lg"]).isRequired
-}
+  size: oneOf(["sm", "md", "lg"]).isRequired,
+};
 
 // AppSlider component
 const AppSlider = () => {
