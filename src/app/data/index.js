@@ -412,3 +412,23 @@ export const promoCardData = {
     alt: "promotion",
   },
 };
+
+export const vCornerBnrData = {
+  link: "#",
+  heading: (
+    <>
+      Voters <span>Corner</span>
+    </>
+  ),
+  currentTitle: "voters-corner",
+};
+
+export const eHistoryBnrData = {
+  link: "#",
+  heading: (
+    <>
+      Election <span>History</span>
+    </>
+  ),
+  currentTitle: "election-history",
+};
