@@ -11,7 +11,7 @@ import AppTabSwitcher, {
 
 import DetailBanner from "../_components/DetailBanner";
 import { eHistoryBnrData } from "../data";
-import NewsList from "../home/NewsUpdate/shared/NewsList";
+import HistoryList from "./shared/HistoryList";
 
 // news tab navigation
 const electionHistoryTabNavigation = [
@@ -70,7 +70,7 @@ function ElectionHistory() {
                 />
               </AppBox>
               <AppTabContent
-                render={(activeTabID) => <NewsList activeKey={activeTabID} />}
+                render={(activeTabID) => <HistoryList activeKey={activeTabID} />}
               />
             </AppTabContainer>
           </AppTabSwitcher>

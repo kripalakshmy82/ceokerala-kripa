@@ -433,3 +433,65 @@ export const eHistoryBnrData = {
   currentTitle: "election-history",
 };
 
+export const historyListItem = [
+  {
+    img : {
+      url: "./assets/icon-avatar.png",
+      alt: "image"
+    },
+    heading:"Sample Name",
+    place: "Idukki",
+    party: (
+      <>
+      Sample Party
+      <span>(sample title)</span>
+      </>
+    ),
+    link: "#",
+  },
+  {
+    img : {
+      url: "./assets/icon-avatar.png",
+      alt: "image"
+    },
+    heading:"Sample Name",
+    place: "Ernakulam",
+    party: (
+      <>
+      Sample Party
+      <span>(sample title)</span>
+      </>
+    ),
+    link: "#",
+  },
+  {
+    img : {
+      url: "./assets/icon-avatar.png",
+      alt: "image"
+    },
+    heading:"Sample Name",
+    place: "Thiruvananthapuram",
+    party: (
+      <>
+      Sample Party
+      <span>(sample title)</span>
+      </>
+    ),
+    link: "#",
+  },
+  {
+    img : {
+      url: "./assets/icon-avatar.png",
+      alt: "image"
+    },
+    heading:"Sample Name",
+    place: "Wayanadu",
+    party: (
+      <>
+      Sample Party
+      <span>(sample title)</span>
+      </>
+    ),
+    link: "#",
+  },
+]
