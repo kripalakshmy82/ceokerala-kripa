@@ -5,7 +5,6 @@ import { Card } from "react-bootstrap";
 
 import { AppBox } from "../Elements";
 import AppCard from "../AppCard";
-import classNames from "classnames";
 
 const AvatarInfo = ({
   img,
@@ -14,8 +13,6 @@ const AvatarInfo = ({
   party,
   heading,
   className = "",
-  iconUrl = "",
-  direction = "column",
 }) => {
   return (
     <>
@@ -25,7 +22,7 @@ const AvatarInfo = ({
             <span
               className="d-block m-auto"
               style={{
-                maxWidth: "200px",
+                maxWidth: "160px",
               }}
             >
               {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
