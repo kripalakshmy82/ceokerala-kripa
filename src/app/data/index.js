@@ -448,6 +448,7 @@ export const historyListItem = [
       </>
     ),
     link: "#",
+    iconUrl: "./assets/icon-avatar.png"
   },
   {
     img : {
@@ -463,6 +464,7 @@ export const historyListItem = [
       </>
     ),
     link: "#",
+    iconUrl: "./assets/icon-avatar.png"
   },
   {
     img : {
@@ -478,6 +480,7 @@ export const historyListItem = [
       </>
     ),
     link: "#",
+    iconUrl: "./assets/icon-avatar.png"
   },
   {
     img : {
@@ -493,5 +496,6 @@ export const historyListItem = [
       </>
     ),
     link: "#",
+    iconUrl: "./assets/icon-avatar.png"
   },
 ]
