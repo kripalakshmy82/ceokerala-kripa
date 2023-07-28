@@ -18,7 +18,6 @@ const HistoryListItem = ({ img, heading, place, party, link }) => {
           place={place}
           party={party}
           link={link}
-          type="vertical"
         />
       </AppBox>
   );
