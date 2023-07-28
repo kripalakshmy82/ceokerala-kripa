@@ -498,4 +498,20 @@ export const historyListItem = [
     link: "#",
     iconUrl: "./assets/icon-avatar.png"
   },
+  {
+    img : {
+      url: "./assets/icon-avatar.png",
+      alt: "image"
+    },
+    heading:"Sample Name",
+    place: "Wayanadu",
+    party: (
+      <>
+      Sample Party
+      <span>(sample title)</span>
+      </>
+    ),
+    link: "#",
+    iconUrl: "./assets/icon-avatar.png"
+  },
 ]

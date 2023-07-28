@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
 import classNames from "classnames";
 import { Container } from "react-bootstrap";
+
 import { AppBox, AppSection } from "@/app/_components";
 import AppTabSwitcher, {
   AppTabContainer,
@@ -49,7 +50,7 @@ function ElectionHistory() {
   const navTabcx = classNames({
     "flex-block flex-block-links gap-3 d-flex text-black": true,
   });
-  
+
   return (
     <>
       <DetailBanner
@@ -69,8 +70,11 @@ function ElectionHistory() {
                   className={navTabcx}
                 />
               </AppBox>
+
               <AppTabContent
-                render={(activeTabID) => <HistoryList activeKey={activeTabID} />}
+                render={(activeTabID) => (
+                  <HistoryList activeKey={activeTabID} />
+                )}
               />
             </AppTabContainer>
           </AppTabSwitcher>

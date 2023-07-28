@@ -37,7 +37,7 @@ const AvatarInfo = ({
               </Card.Title>
               {link && (
                 <a href={link} className="stretched-link">
-                  <img src="./icons/arrow-right.svg" />
+                  <img src="./icons/arrow-right.svg" className="w-auto" />
                 </a>
               )}
             </Card.Body>
