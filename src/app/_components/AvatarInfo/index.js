@@ -17,7 +17,11 @@ const AvatarInfo = ({
     <>
       <AppCard className={className} isShadow>
         <AppBox className="avatar-img-box pt-4 px-4 pb-0">
-          {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
+          <span className="d-block m-auto" style={{
+            maxWidth: "200px" 
+          }}>
+            {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
+          </span>
         </AppBox>
         <AppBox className="content-box">
           <Card.Body className="p-4">

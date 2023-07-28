@@ -47,7 +47,7 @@ function ElectionHistory() {
   });
 
   const navTabcx = classNames({
-    "flex-block flex-block-links gap-3 d-flex": true,
+    "flex-block flex-block-links gap-3 d-flex text-black": true,
   });
   
   return (
@@ -58,7 +58,7 @@ function ElectionHistory() {
         currentTitle={eHistoryBnrData.currentTitle}
       />
 
-      <AppSection id="history" className="election-history">
+      <AppSection id="history" className="section-block-md election-history">
         <Container>
           <AppTabSwitcher activeKey="lok-sabha">
             <AppTabContainer id="history-tabs">
