@@ -29,7 +29,7 @@ function AvatarInfoItem({
   });
 
   return (
-    <>
+    <AppCard cardType="hover" className="p-4">
       <div className={direction === "column" ? columnClassName : rowClassName}>
         <div className="info-image">
           {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
@@ -41,7 +41,7 @@ function AvatarInfoItem({
           {link && <a href={link} className="stretched-link"></a>}
         </div>
       </div>
-    </>
+    </AppCard>
   );
 }
 
@@ -54,21 +54,19 @@ AvatarInfoItem.propTypes = {
     alt: string,
   }),
   link: string,
-  direction: oneOf(["column", "row"])
+  direction: oneOf(["column", "row"]),
 };
 
 const HistoryListItem = ({ img, party, place, heading, link }) => {
   return (
-    <AppCard>
-      <AvatarInfoItem
-        heading={heading}
-        img={img}
-        place={place}
-        party={party}
-        link={link}
-        direction="row"
-      />
-    </AppCard>
+    <AvatarInfoItem
+      heading={heading}
+      img={img}
+      place={place}
+      party={party}
+      link={link}
+      direction="row"
+    />
   );
 };
 
