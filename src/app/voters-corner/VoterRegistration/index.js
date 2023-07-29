@@ -11,7 +11,7 @@ const VoterRegistration = () => {
       <Container>
         <Row>
           <Col lg={12} className="mb-4">
-            <AppText render={() => <h2>Registration</h2>}></AppText>
+            <AppText render={() => <h2>Registration</h2>} />
           </Col>
           {registerCardData.map(({ ...rest }, key) => (
             <Col lg={4} md={4} sm={12} xs={12} key={key}>

@@ -16,7 +16,7 @@ const AvatarInfo = ({
 }) => {
   return (
     <>
-      <AppCard className={className} isShadow>
+      <AppCard className={className} cardType="hover">
         <AppBox className="avatar-info-box">
           <AppBox className="avatar-img-box pt-4 px-4 pb-0">
             <span

@@ -1,27 +1,74 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Row, Col, Spinner } from "react-bootstrap";
-import { Carousel } from "react-responsive-carousel";
+import { string, oneOf, node, shape } from "prop-types";
+import { Row, Col, Spinner, Card } from "react-bootstrap";
 
-import { AppBox } from "@/app/_components";
-import AvatarInfo from "@/app/_components/AvatarInfo";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import { AppCard, AppBox, AppText } from "@/app/_components";
 
 import { historyListItem } from "@/app/data";
+import classNames from "classnames";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+function AvatarInfoItem({
+  img,
+  heading,
+  place,
+  party,
+  link,
+  direction = "column",
+}) {
+  const columnClassName = classNames({
+    "d-flex flex-column": direction === "column",
+  });
+  const rowClassName = classNames({
+    "d-flex flex-row": direction === "row",
+  });
 
-const HistoryListItem = ({ img, heading, place, party, link }) => {
   return (
-    <AppBox className="history-info">
-      <AvatarInfo
-        img={img}
+    <>
+      <div className={direction === "column" ? columnClassName : rowClassName}>
+        <div className="info-image">
+          {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
+        </div>
+        <div className="info-content">
+          <AppText render={() => <h4>{heading}</h4>} />
+          <AppText render={() => <h5>{place}</h5>} />
+          <AppText render={() => <h6>{party}</h6>} />
+          {link && <a href={link} className="stretched-link"></a>}
+        </div>
+      </div>
+    </>
+  );
+}
+
+AvatarInfoItem.propTypes = {
+  heading: string,
+  place: string,
+  party: node,
+  img: shape({
+    url: string,
+    alt: string,
+  }),
+  link: string,
+  direction: oneOf(["column", "row"])
+};
+
+const HistoryListItem = ({ img, party, place, heading, link }) => {
+  return (
+    <AppCard>
+      <AvatarInfoItem
         heading={heading}
+        img={img}
         place={place}
         party={party}
         link={link}
+        direction="row"
       />
-    </AppBox>
+    </AppCard>
   );
 };
 
@@ -36,14 +83,37 @@ const HistoryList = ({ activeKey }) => {
   }, [activeKey]);
 
   const settings = {
-    showIndicators: false,
-    showThumbs: false,
-    swipeable: true,
-    transitionTime: 1000,
-    showArrows: true,
-    showStatus: false,
-    autoPlay: true,
-    showStatus: 4,
+    dots: false,
+    arrows: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -55,13 +125,13 @@ const HistoryList = ({ activeKey }) => {
       ) : (
         <>
           <Row>
-            <Carousel {...settings}>
+            <Slider {...settings} className="history-carousel">
               {historyListItem.map((history, key) => (
-                <Col lg={3} key={key}>
+                <Col key={key}>
                   <HistoryListItem {...history} />
                 </Col>
               ))}
-            </Carousel>
+            </Slider>
           </Row>
         </>
       )}
