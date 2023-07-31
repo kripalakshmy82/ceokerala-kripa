@@ -1,28 +1,30 @@
-"use client"
+"use client";
 
 import { Container } from "react-bootstrap";
-import { boardTeamData } from "@/app/data";
+import { AppSection, AppBox, AppCard, AvatarInfo } from "@/app/_components";
+import classNames from "classnames";
 
-const BoardTeam = () => {
+const BoardTeam = ({ data }) => {
+  const boardTeamCx = classNames({
+    "d-flex gap-4": true,
+    "flex-column flex-lg-row flex-md-row flex-sm-column": true,
+    "justify-content-between align-items-center": true,
+  });
+
   return (
-    <section className="board-team section-block-team">
+    <AppSection id="board-team" className="board-team section-block-team">
       <Container>
-        <div className="d-flex gap-4 flex-lg-row flex-md-row flex-sm-column flex-column justify-content-between align-items-center">
-          {boardTeamData.map(({ alt, imgUrl, heading, description }, key) => (
-            <div
-              className="p-4 flex-fill card-item text-center rounded-3"
-              key={key}
-            >
-              <div className="img-block mb-3">
-                <img src={imgUrl} className="rounded-circle w-100" alt={alt} />
-              </div>
-              <h5>{heading}</h5>
-              <p className="mb-0 small">{description}</p>
-            </div>
+        <AppBox className={boardTeamCx}>
+          {data.map(({ id, ...rest }) => (
+            <AppCard key={id} cardType="hover">
+              <AppBox className="px-2 py-5">
+                <AvatarInfo {...rest} />
+              </AppBox>
+            </AppCard>
           ))}
-        </div>
+        </AppBox>
       </Container>
-    </section>
+    </AppSection>
   );
 };
 

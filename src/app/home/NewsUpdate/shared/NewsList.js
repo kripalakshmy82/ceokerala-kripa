@@ -6,12 +6,9 @@ import classNames from "classnames";
 
 import { AppBox, AppCard, AppText, AppButton } from "@/app/_components";
 
-import { newsUpdate } from "@/app/data";
-
 // Use the default Pagination Component In react bootstrap
 // And change this in to an root component
 // url : https://react-bootstrap.netlify.app/docs/components/pagination
-
 function Pagination() {
   return (
     <div className="pagination-wrap">
@@ -57,35 +54,37 @@ function Pagination() {
 
 const NewsListItem = ({ heading, description, href }) => {
   const newsListItemcx = classNames({
-    "p-5 mb-3": true,
+    "p-5": true,
     "d-flex flex-lg-row flex-md-row flex-sm-column flex-column": true,
     "justify-content-between align-items-center": true,
   });
 
   return (
-    <AppCard className={newsListItemcx} isShadow>
-      <AppBox className="news-info">
-        <AppText
-          render={() => (
-            <>
-              <h4>{heading}</h4>
-              <small>{description}</small>
-            </>
-          )}
-        />
-      </AppBox>
-      <AppBox className="news-read-more">
-        <AppButton variant="themeBtn" title="Read more" href={href} />
+    <AppCard isShadow>
+      <AppBox className={newsListItemcx}>
+        <AppBox className="news-info">
+          <AppText
+            render={() => (
+              <>
+                <h4>{heading}</h4>
+                <small>{description}</small>
+              </>
+            )}
+          />
+        </AppBox>
+        <AppBox className="news-read-more">
+          <AppButton variant="themeBtn" title="Read more" href={href} />
+        </AppBox>
       </AppBox>
     </AppCard>
   );
 };
 
-const NewsList = ({ activeKey }) => {
+const NewsList = ({ activeKey, data }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 5000);
+    setTimeout(() => setLoading(false), 1000);
     return () => {
       setLoading(true);
     };
@@ -99,8 +98,10 @@ const NewsList = ({ activeKey }) => {
         </AppBox>
       ) : (
         <>
-          {newsUpdate.map((news, key) => (
-            <NewsListItem {...news} key={key} />
+          {data.map((news, key) => (
+            <AppBox className="mb-3" key={key}>
+              <NewsListItem {...news} />
+            </AppBox>
           ))}
           <Pagination />
         </>

@@ -1,11 +1,24 @@
 "use client";
 
 import { Container, Card } from "react-bootstrap";
-import AppCounter from "@/app/_components/AppCounter";
+import { useCountUp } from "use-count-up";
+
 import { AppBox, AppSection, AppText } from "@/app/_components";
 
+const VotersCounter = ({ no, duration }) => {
+  const { value } = useCountUp({
+    isCounting: true,
+    end: no,
+    duration: duration,
+    easing: "linear",
+  });
 
-const TotalVoters = () => {
+  return <p className="mb-0 counter text-white">{value}</p>;
+};
+
+const TotalVoters = ({ data }) => {
+  const { newVoters, totalVoters } = data;
+
   return (
     <AppSection id="voters-count" className="total-voters section-block-sm">
       <Container>
@@ -14,16 +27,14 @@ const TotalVoters = () => {
             <AppBox className="box">
               <AppText
                 render={() => <h4 className="text-white mb-2">Total Voters</h4>}
-              ></AppText>
-              <AppCounter end={500} duration={80} />
-              
+              />
+              <VotersCounter no={totalVoters} duration={80} />
             </AppBox>
             <AppBox className="box">
               <AppText
                 render={() => <h4 className="text-white mb-2">New Voters</h4>}
-              ></AppText>
-              <AppCounter end={600} duration={40} />
-              
+              />
+              <VotersCounter end={newVoters} duration={60} />
             </AppBox>
           </AppBox>
         </Card>

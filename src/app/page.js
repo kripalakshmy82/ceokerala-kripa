@@ -1,3 +1,5 @@
+import { createElement } from "react";
+
 import SpotLight from "./home/Spotlight";
 import VotersCard from "./home/VotersCard";
 import BoardTeam from "./home/BoardTeam";
@@ -5,7 +7,16 @@ import HelpCard from "./home/HelpCard";
 import NewsList from "./home/NewsUpdate";
 import LinkedCard from "./home/LinkedCard";
 import Gallery from "./home/Gallery";
-import TotalVoters from "./home/TotalVoters";
+
+import {
+  sliderData,
+  votersCardData,
+  boardTeamData,
+  helpCardData,
+  newsUpdate,
+  linkedCardData,
+  galleryData,
+} from "@/app/data";
 
 export const metadata = {
   title: "ecm-kerala",
@@ -13,16 +24,17 @@ export const metadata = {
 };
 
 export default function Home() {
-  return (
-    <main>
-      <SpotLight />
-      <VotersCard />
-      <BoardTeam />
-      <HelpCard />
-      <NewsList />
-      <LinkedCard />
-      <Gallery />
-      <TotalVoters />
-    </main>
+  const components = [
+    [SpotLight, { data: sliderData }],
+    [VotersCard, { data: votersCardData }],
+    [BoardTeam, { data: boardTeamData }],
+    [HelpCard, { data: helpCardData }],
+    [NewsList, { data: newsUpdate }],
+    [LinkedCard, { data: linkedCardData }],
+    [Gallery, { data: galleryData }],
+  ];
+
+  return components.map(([Component, props]) =>
+    createElement(Component, props)
   );
 }

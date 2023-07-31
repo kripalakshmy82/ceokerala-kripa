@@ -39,7 +39,7 @@ function NewsSectionTitle() {
   );
 }
 
-const NewsUpdate = () => {
+const NewsUpdate = ({ data }) => {
   const newsTitlecx = classNames({
     "news-title-section": true,
     "d-flex": true,
@@ -67,7 +67,7 @@ const NewsUpdate = () => {
             </AppBox>
             <AppTabContent
               render={(activeTabID) => (
-                <NewsList activeKey={activeTabID} />
+                <NewsList activeKey={activeTabID} data={data} />
               )}
             />
           </AppTabContainer>

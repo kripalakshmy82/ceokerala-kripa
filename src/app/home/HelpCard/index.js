@@ -5,9 +5,8 @@ import classNames from "classnames";
 import { Container, Col } from "react-bootstrap";
 
 import { InfoCard, AppSection } from "@/app/_components";
-import { helpCardData } from "@/app/data";
 
-const HelpCard = () => {
+const HelpCard = ({ data }) => {
   const colCx = classNames({
     "d-flex": true,
     "gap-4": true,
@@ -19,20 +18,15 @@ const HelpCard = () => {
     <AppSection id="help-card" className="help-card-section section-block-lg">
       <Container>
         <Col className={colCx}>
-          {helpCardData.map(
-            ({ id, iconUrl, heading, description, href }) => (
-              <InfoCard
-                key={id}
-                className="p-0"
-                title={heading}
-                description={description}
-                cardTitleDir="column"
-                iconUrl={iconUrl}
-                iconWidth="full"
-                link={href}
-              />
-            )
-          )}
+          {data.map(({ id, ...rest }) => (
+            <InfoCard
+              key={id}
+              className="py-5 px-4"
+              cardTitleDir="column"
+              iconWidth="full"
+              {...rest}
+            />
+          ))}
         </Col>
       </Container>
     </AppSection>
