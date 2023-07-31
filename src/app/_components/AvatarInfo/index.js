@@ -1,65 +1,75 @@
 "use client";
 
-import { string, node, shape, oneOf } from "prop-types";
-import { Card } from "react-bootstrap";
+import { string, shape, oneOf } from "prop-types";
+import { Image } from "react-bootstrap";
+import classNames from "classnames";
 
-import { AppBox } from "../Elements";
-import AppCard from "../AppCard";
+import { AppBox, AppText } from "../Elements";
+import AppButton from "../AppButton";
 
 const AvatarInfo = ({
+  direction = "column",
+  name,
   img,
-  link,
-  place,
-  party,
-  heading,
-  className = "",
+  designation = "",
+  additionalInfo = {},
 }) => {
+  const avatarInfoCx = classNames({
+    "d-flex gap-4": true,
+    "flex-row justify-content-center": direction === "row",
+    "align-items-center flex-column": direction === "column",
+  });
+
   return (
-    <>
-      <AppCard className={className} cardType="hover">
-        <AppBox className="avatar-info-box">
-          <AppBox className="avatar-img-box pt-4 px-4 pb-0">
-            <span
-              className="d-block m-auto"
-              style={{
-                maxWidth: "160px",
-              }}
-            >
-              {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
-            </span>
-          </AppBox>
-          <AppBox className="content-box">
-            <Card.Body className="p-4">
-              <Card.Title className="mb-3">
-                <h4 className="mb-3">{heading}</h4>
-                <h5 className="small">{place}</h5>
-                <h6 className="small">{party}</h6>
-              </Card.Title>
-              {link && (
-                <a href={link} className="stretched-link">
-                  <img src="./icons/arrow-right.svg" className="w-auto" />
-                </a>
-              )}
-            </Card.Body>
-          </AppBox>
-        </AppBox>
-      </AppCard>
-    </>
+    <AppBox className={avatarInfoCx}>
+      <AppBox className="avatar-img">
+        <Image src={img.url} alt={img.alt} className="w-100" roundedCircle />
+        {additionalInfo && additionalInfo?.icon && <p>Icon Component</p>}
+      </AppBox>
+      <AppBox className="text-center">
+        <AppText render={() => <h5 className="fw-bold">{name}</h5>} />
+        {designation && <AppText render={() => <h6>{designation}</h6>} />}
+        {additionalInfo && additionalInfo?.party && (
+          <AppText
+            render={() => (
+              <>
+                <h5>{additionalInfo.party.area}</h5>
+                <h6>{additionalInfo.party.name}</h6>
+                <h6>{additionalInfo.party.annotation}</h6>
+              </>
+            )}
+          />
+        )}
+        {additionalInfo && additionalInfo?.link && (
+          <AppButton {...additionalInfo.link} />
+        )}
+      </AppBox>
+    </AppBox>
   );
 };
 
 AvatarInfo.propTypes = {
-  heading: string,
-  place: string,
-  party: node,
-  link: string,
+  direction: oneOf(["row", "column"]),
+  name: string.isRequired,
+  designation: string,
   img: shape({
-    url: string,
-    alt: string,
+    url: string.isRequired,
+    alt: string.isRequired,
   }),
-  className: string,
-  iconUrl: string,
-  direction: oneOf(["column", "row"]),
+  additionalInfo: shape({
+    party: shape({
+      area: string,
+      name: string,
+      annotation: string,
+    }),
+    icon: shape({
+      url: string,
+    }),
+    link: shape({
+      href: string,
+      anchorTitle: string,
+    }),
+  }),
 };
 
 export default AvatarInfo;

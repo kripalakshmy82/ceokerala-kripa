@@ -7,7 +7,6 @@ import HelpCard from "./home/HelpCard";
 import NewsList from "./home/NewsUpdate";
 import LinkedCard from "./home/LinkedCard";
 import Gallery from "./home/Gallery";
-import TotalVoters from "./home/TotalVoters";
 
 import {
   sliderData,
@@ -33,7 +32,6 @@ export default function Home() {
     [NewsList, { data: newsUpdate }],
     [LinkedCard, { data: linkedCardData }],
     [Gallery, { data: galleryData }],
-    [TotalVoters, { data: { newVoters: 500, totalVoters: 600 } }],
   ];
 
   return components.map(([Component, props]) =>

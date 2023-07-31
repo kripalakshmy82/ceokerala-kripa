@@ -18,16 +18,13 @@ const HelpCard = ({ data }) => {
     <AppSection id="help-card" className="help-card-section section-block-lg">
       <Container>
         <Col className={colCx}>
-          {data.map(({ id, iconUrl, heading, description, href }) => (
+          {data.map(({ id, ...rest }) => (
             <InfoCard
               key={id}
-              className="p-0"
-              title={heading}
-              description={description}
+              className="py-5 px-4"
               cardTitleDir="column"
-              iconUrl={iconUrl}
               iconWidth="full"
-              link={href}
+              {...rest}
             />
           ))}
         </Col>

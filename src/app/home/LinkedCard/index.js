@@ -17,15 +17,12 @@ const LinkedCard = ({ data }) => {
     <AppSection id="helpful-links" className="section-block-md">
       <Container>
         <AppBox className={wrprCx}>
-          {data.map(({ id, heading, description, href, iconUrl }) => (
+          {data.map(({ id, ...rest }) => (
             <InfoCard
               key={id}
-              title={heading}
-              description={description}
-              iconUrl={iconUrl}
-              link={href}
-              className="p-2"
+              className="py-5 px-4"
               cardTitleDir="column"
+              {...rest}
             />
           ))}
         </AppBox>

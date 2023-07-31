@@ -15,7 +15,11 @@ const VoterRegistration = () => {
           </Col>
           {registerCardData.map(({ ...rest }, key) => (
             <Col lg={4} md={4} sm={12} xs={12} key={key}>
-              <InfoCard className="p-0 theme-card overflow-hidden" {...rest} />
+              <InfoCard
+                className="p-0 theme-card overflow-hidden"
+                cardTitleDir="row"
+                {...rest}
+              />
             </Col>
           ))}
         </Row>

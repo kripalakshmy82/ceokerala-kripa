@@ -3,18 +3,13 @@ import { Card } from "react-bootstrap";
 
 import classNames from "classnames";
 import { AppBox } from "../Elements";
+import AppButton from "../AppButton";
 
-const AppCard = ({
-  className = "",
-  isShadow = false,
-  cardType = "default",
-  children,
-}) => {
+const AppCard = ({ isShadow = false, cardType = "default", children }) => {
   const appCardClassNames = classNames({
-    "rounded-theme flex-fill border-0 p-0 text-left bg-transparent": true,
+    "rounded-theme flex-fill border-0 p-0 text-left bg-transparent app-card": true,
     "shadow-lg": isShadow,
     "card-item shadow-sm": cardType === "hover",
-    [className]: className !== "",
   });
 
   return <Card className={appCardClassNames}>{children}</Card>;
@@ -30,12 +25,12 @@ AppCard.propTypes = {
 const InfoCard = ({
   title,
   description,
+  img,
   cardTitleDir = "column",
   iconWidth = "none",
   iconUrl = "",
-  img,
-  link = "",
   className = "",
+  link = {},
 }) => {
   const titleClassName = classNames({
     "d-flex gap-4 align-items-center": cardTitleDir === "row",
@@ -51,9 +46,9 @@ const InfoCard = ({
   });
 
   return (
-    <AppCard className={className} cardType="hover">
+    <AppCard cardType="hover">
       {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
-      <Card.Body className="p-4">
+      <Card.Body className={className}>
         <Card.Title className={titleClassName}>
           {iconUrl && (
             <span className={iconWrapperClassName}>
@@ -62,9 +57,9 @@ const InfoCard = ({
           )}
           <h4 className="mb-3">{title}</h4>
         </Card.Title>
-        <Card.Text className="mb-0 d-flex">{description}</Card.Text>
+        <Card.Text className="mb-2 d-flex">{description}</Card.Text>
+        {link && <AppButton {...link} />}
       </Card.Body>
-      {link && <a href={link} className="stretched-link"></a>}
     </AppCard>
   );
 };
@@ -79,8 +74,11 @@ InfoCard.propTypes = {
     alt: string,
   }),
   iconUrl: string,
-  link: string,
-  className: string,
+  link: shape({
+    href: string,
+    anchorTitle: string,
+  }),
+  className: string.isRequired,
 };
 
 const PromoCard = ({ className = "", img, type = "promo" }) => {

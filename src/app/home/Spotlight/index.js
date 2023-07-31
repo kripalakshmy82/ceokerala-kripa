@@ -1,6 +1,6 @@
 "use client";
 
-import { string, number, bool, oneOf } from "prop-types";
+import { string, number, bool, oneOf, shape } from "prop-types";
 
 import classNames from "classnames";
 import ReactMarkdown from "react-markdown";
@@ -15,7 +15,7 @@ import NewsTicker from "@/app/home/NewsTicker";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 // Slider intro component
-const AppSliderIntro = ({ heading, description, href }) => {
+const AppSliderIntro = ({ heading, description, link }) => {
   return (
     <AppBox className="content text-start">
       <AppText
@@ -35,7 +35,7 @@ const AppSliderIntro = ({ heading, description, href }) => {
       />
       <AppBox className="btn-box d-flex gap-3">
         <AppButton
-          href={href}
+          {...link}
           color="black"
           title="Discover"
           variant="themeBtn"
@@ -48,7 +48,11 @@ const AppSliderIntro = ({ heading, description, href }) => {
 AppSliderIntro.propTypes = {
   heading: string.isRequired,
   description: string.isRequired,
-  href: string.isRequired,
+  link: shape({
+    href: string.isRequired,
+    title: string.isRequired,
+    anchorTitle: string.isRequired,
+  }),
 };
 
 // Slider spot png obj component

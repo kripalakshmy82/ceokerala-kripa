@@ -6,7 +6,11 @@ export const sliderData = [
         available, but the majority have suffered alteration in some
         form, by injected humour, or randomised words which don't
         look even slightly believable.`,
-    href: "#",
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
     img_one: {
       url: "./slider-img/spot-img1.jpg",
       alt: "spot-image-1",
@@ -31,7 +35,11 @@ export const sliderData = [
     available, but the majority have suffered alteration in some
     form, by injected humour, or randomised words which don't
     look even slightly believable.`,
-    href: "#",
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
     img_one: {
       url: "./slider-img/spot-img1.jpg",
       alt: "spot-image-1",
@@ -66,12 +74,21 @@ export const votersCardData = [
       url: "./assets/voters.gif",
       alt: "voters-corner",
     },
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
   },
   {
     title: "Political Party",
     img: {
       url: "./assets/party.gif",
       alt: "political-party",
+    },
+    link: {
+      href: "#",
+      anchorTitle: "Read More",
     },
   },
   {
@@ -80,12 +97,22 @@ export const votersCardData = [
       url: "./assets/employee.gif",
       alt: "employees-corner",
     },
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
   },
   {
     title: "Election",
     img: {
       url: "./assets/election.gif",
       alt: "election",
+    },
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
     },
   },
 ];
@@ -99,6 +126,12 @@ export const boardTeamData = [
       url: "./assets/board-team1.jpg",
       alt: "S.H Rajiv Kumar",
     },
+    additionalInfo: {
+      link: {
+        href: "#",
+        anchorTitle: "S.H Rajiv Kumar",
+      },
+    },
   },
   {
     id: 2,
@@ -107,6 +140,12 @@ export const boardTeamData = [
     img: {
       url: "./assets/board-team1.jpg",
       alt: "S.H Rajiv Kumar",
+    },
+    additionalInfo: {
+      link: {
+        href: "#",
+        anchorTitle: "S.H Rajiv Kumar",
+      },
     },
   },
   {
@@ -117,6 +156,12 @@ export const boardTeamData = [
       url: "./assets/board-team1.jpg",
       alt: "S.H Rajiv Kumar",
     },
+    additionalInfo: {
+      link: {
+        href: "#",
+        anchorTitle: "S.H Rajiv Kumar",
+      },
+    },
   },
   {
     id: 4,
@@ -126,45 +171,97 @@ export const boardTeamData = [
       url: "./assets/board-team1.jpg",
       alt: "S.H Rajiv Kumar",
     },
+    additionalInfo: {
+      link: {
+        href: "#",
+        anchorTitle: "S.H Rajiv Kumar",
+      },
+    },
   },
 ];
-
 
 export const helpCardData = [
   {
     id: 1,
     iconUrl: "./assets/hello-voters.png",
-    href: "#",
-    heading: "Hello Voters",
     description:
       "The Election Commission of India, under its flagship voter awareness programme – SVEEP.",
+    link: {
+      href: "#",
+      anchorTitle: "Hello Voters",
+    },
+    title: "Hello Voters",
   },
   {
     id: 2,
-    heading: "e-EPIC",
+    title: "e-EPIC",
     description:
       "e-EPIC is a portable document format(PDF) version of the EPIC which can be downloaded.",
     iconUrl: "./assets/e-epic.png",
-    href: "#",
+    link: {
+      href: "#",
+      anchorTitle: "e-EPIC",
+    },
   },
   {
     id: 3,
-    heading: "NVSP",
+    title: "NVSP",
     description:
       "India is a Socialist, Secular, Democratic Republic and the largest democracy in the World.",
     iconUrl: "./assets/nvsp.png",
-    href: "#",
+    link: {
+      href: "#",
+      anchorTitle: "NVSP",
+    },
   },
   {
     id: 4,
-    heading: "CEO Kerala",
+    title: "CEO Kerala",
     description:
       "On the other hand, Election to the Local Self Government bodies, the division of wards, reservation.",
     iconUrl: "./assets/ceo.png",
-    href: "#",
+    link: {
+      href: "#",
+      anchorTitle: "CEO Kerala",
+    },
   },
 ];
 
+export const linkedCardData = [
+  {
+    id: 1,
+    title: "SVEEP",
+    description: `SVEEP is the flagship program of the Election Commission of India
+    for voter education, spreading voter awareness and promoting.`,
+    link: {
+      href: "#",
+      anchorTitle: "SVEEP",
+    },
+    iconUrl: "./assets/sveep.svg",
+  },
+  {
+    id: 2,
+    title: "Tweets",
+    description: `Official Twitter handle of The Chief Electoral Officer, Kerala.
+    Conducting free and fair election and enrolling every eligible person.`,
+    link: {
+      href: "#",
+      anchorTitle: "Tweets",
+    },
+    iconUrl: "./assets/tweet.svg",
+  },
+  {
+    id: 3,
+    title: "Media & Publications",
+    description: `ECI Publications and data collection fuels the Election Commission
+    of India's mission to improve voter experience and support.`,
+    link: {
+      href: "#",
+      anchorTitle: "Media & Publications",
+    },
+    iconUrl: "./assets/media.svg",
+  },
+];
 
 export const newsUpdate = [
   {
@@ -183,8 +280,6 @@ export const newsUpdate = [
     href: "#",
   },
 ];
-
-
 
 export const socialLinks = [
   {
@@ -262,34 +357,6 @@ export const helpLinks = [
   },
 ];
 
-
-export const linkedCardData = [
-  {
-    id: 1,
-    heading: "SVEEP",
-    description: `SVEEP is the flagship program of the Election Commission of India
-    for voter education, spreading voter awareness and promoting.`,
-    href: "#",
-    iconUrl: "./assets/sveep.svg",
-  },
-  {
-    id: 2,
-    heading: "Tweets",
-    description: `Official Twitter handle of The Chief Electoral Officer, Kerala.
-    Conducting free and fair election and enrolling every eligible person.`,
-    href: "#",
-    iconUrl: "./assets/tweet.svg",
-  },
-  {
-    id: 3,
-    heading: "Media & Publications",
-    description: `ECI Publications and data collection fuels the Election Commission
-    of India's mission to improve voter experience and support.`,
-    href: "#",
-    iconUrl: "./assets/media.svg",
-  },
-];
-
 export const galleryData = [
   {
     alt: "",
@@ -322,8 +389,6 @@ export const galleryData = [
 
 export const registerCardData = [
   {
-    alt: "image",
-    imgUrl: "./assets/sveep.svg",
     img: {
       url: "./gallery/gallery-1.jpg",
       alt: "image",
@@ -335,12 +400,11 @@ export const registerCardData = [
         Registration
       </>
     ),
+    iconUrl: "./assets/sveep.svg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
   },
   {
-    alt: "image",
-    imgUrl: "./assets/tweet.svg",
     img: {
       url: "./gallery/gallery-2.jpg",
       alt: "image",
@@ -352,12 +416,11 @@ export const registerCardData = [
         Registration Status
       </>
     ),
+    iconUrl: "./assets/sveep.svg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
   },
   {
-    alt: "image",
-    imgUrl: "./assets/media.svg",
     img: {
       url: "./gallery/gallery-3.jpg",
       alt: "image",
@@ -369,6 +432,7 @@ export const registerCardData = [
         Registration in E-roll
       </>
     ),
+    iconUrl: "./assets/sveep.svg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
   },

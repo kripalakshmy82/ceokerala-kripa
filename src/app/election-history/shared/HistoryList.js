@@ -32,7 +32,7 @@ function AvatarInfoItem({
     <AppCard cardType="hover" className="p-4">
       <div className={direction === "column" ? columnClassName : rowClassName}>
         <div className="info-image">
-          {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
+          {img && <Card.Img variant="top" src={img.url} alt={img.alt}/>}
         </div>
         <div className="info-content">
           <AppText render={() => <h4>{heading}</h4>} />
@@ -65,7 +65,7 @@ const HistoryListItem = ({ img, party, place, heading, link }) => {
       place={place}
       party={party}
       link={link}
-      direction="row"
+      direction="column"
     />
   );
 };
