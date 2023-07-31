@@ -52,7 +52,11 @@ function Pagination() {
   );
 }
 
-const NewsListItem = ({ heading, description, href }) => {
+const NewsListItem = ({
+  title,
+  description,
+  link: { href, title: linkTitle, anchorTitle },
+}) => {
   const newsListItemcx = classNames({
     "p-5": true,
     "d-flex flex-lg-row flex-md-row flex-sm-column flex-column": true,
@@ -66,14 +70,19 @@ const NewsListItem = ({ heading, description, href }) => {
           <AppText
             render={() => (
               <>
-                <h4>{heading}</h4>
+                <h4>{title}</h4>
                 <small>{description}</small>
               </>
             )}
           />
         </AppBox>
         <AppBox className="news-read-more">
-          <AppButton variant="themeBtn" title="Read more" href={href} />
+          <AppButton
+            variant="themeBtn"
+            title={linkTitle}
+            href={href}
+            anchorTitle={anchorTitle}
+          />
         </AppBox>
       </AppBox>
     </AppCard>

@@ -12,7 +12,7 @@ const AppButton = ({
   anchorTitle,
 }) => {
   const appBtnClassNames = classNames({
-    "text-center m-auto d-block stretched-link": true,
+    "text-center d-block stretched-link": true,
     "applink-btn": variant === "default",
     "theme-btn-component border-theme": variant === "themeBtn",
     "color-black": color === "black",

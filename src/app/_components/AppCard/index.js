@@ -7,7 +7,7 @@ import AppButton from "../AppButton";
 
 const AppCard = ({ isShadow = false, cardType = "default", children }) => {
   const appCardClassNames = classNames({
-    "rounded-theme flex-fill border-0 p-0 text-left bg-transparent app-card": true,
+    "rounded-theme flex-fill border-0 p-0 text-left bg-transparent app-card position-relative": true,
     "shadow-lg": isShadow,
     "card-item shadow-sm": cardType === "hover",
   });
@@ -31,6 +31,7 @@ const InfoCard = ({
   iconUrl = "",
   className = "",
   link = {},
+  playIcon
 }) => {
   const titleClassName = classNames({
     "d-flex gap-4 align-items-center": cardTitleDir === "row",
@@ -48,6 +49,23 @@ const InfoCard = ({
   return (
     <AppCard cardType="hover">
       {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
+      { playIcon && (
+        <span className="m-auto d-block position-absolute video-icon">
+          <svg
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            stroke="#5f4bdb"
+            strokeWidth="2"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="css-i6dzq1"
+          >
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </span>
+      )}
       <Card.Body className={className}>
         <Card.Title className={titleClassName}>
           {iconUrl && (
@@ -79,6 +97,7 @@ InfoCard.propTypes = {
     anchorTitle: string,
   }),
   className: string.isRequired,
+  playIcon: bool,
 };
 
 const PromoCard = ({ className = "", img, type = "promo" }) => {
