@@ -1,12 +1,12 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
 :root {
-  --color-dark: #000;
+  --color-dark: #1F2131;
   --color-dark-light: #363848;
   --color-grey: #ccc;
   --color-white: #fff;
   --color-blue: #5F4BDB;
-  --bg-color: #f1f1f1;
+  --bg-color: #EDF1FF;
   --bg-green: #18ac44;
   --bg-violet-light: #ecdeff;
   --bg-violet-dark: #5f4bdb;
@@ -56,6 +56,12 @@ a:focus,
 .nav-link:focus-visible {
   box-shadow: none;
 }
+.background-bg {
+  background-color: var(--bg-color);
+}
+.theme-bg-dark {
+  background-color: var(--color-dark);
+}
 .bg-theme {
   background-color: var(--theme-bg-color);
 }
@@ -89,6 +95,9 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+.quicklink-wrap {
+  transform: translate();
 }
 
 footer {

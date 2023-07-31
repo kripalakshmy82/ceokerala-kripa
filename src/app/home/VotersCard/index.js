@@ -36,14 +36,16 @@ const VotersCard = () => {
     <AppSection id="voters-card" className="voter-h-card-sec mt-4">
       <Container>
         <Row>
-          <AppCard
-            className="py-5 d-flex flex-lg-row flex-md-row flex-sm-column flex-column justify-content-between align-items-center"
-            isShadow
-          >
-            {votersCardData.map((vCd, key) => (
-              <VoterCardItem {...vCd} key={key} />
-            ))}
-          </AppCard>
+          <AppBox className="rounded-theme bg-white p-0">
+            <AppCard
+              className="py-5 d-flex flex-lg-row flex-md-row flex-sm-column flex-column justify-content-between align-items-center"
+              isShadow
+            >
+              {votersCardData.map((vCd, key) => (
+                <VoterCardItem {...vCd} key={key} />
+              ))}
+            </AppCard>
+          </AppBox>
         </Row>
       </Container>
     </AppSection>

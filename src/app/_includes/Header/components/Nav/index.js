@@ -3,7 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const AppNav = ({ children }) => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary py-3 flex-row">
+    <Navbar expand="lg" className="background-bg py-3 flex-row">
       <Container>
         <Navbar.Brand as={Link} href="/" className="navbar-brand">
           <img src="./assets/logo.png" alt="logo" className="w-100" />
