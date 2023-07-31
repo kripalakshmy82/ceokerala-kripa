@@ -265,21 +265,82 @@ export const linkedCardData = [
 
 export const newsUpdate = [
   {
-    heading: "Electoral Roll 2023 - Continuous updation (Second quarter)",
+    title: "Electoral Roll 2023 - Continuous updation (Second quarter)",
     description: "Booth Wise Voters List",
-    href: "#",
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
   },
   {
-    heading: "Special Summary Revision - 2023",
+    title: "Special Summary Revision - 2023",
     description: "Booth Wise Voters List",
-    href: "#",
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
   },
   {
-    heading: "Electoral Roll 2023 - Continuous updation (Second quarter)",
+    title: "Electoral Roll 2023 - Continuous updation (Second quarter)",
     description: "Booth Wise Voters List",
-    href: "#",
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
   },
 ];
+
+export const galleryData = [
+  {
+    id: 1,
+    title:
+      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
+    description:
+      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    img: {
+      url: "./gallery/gallery-1.jpg",
+      alt: "Gallery 1"
+    },
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 1"
+    }
+  },
+  {
+    id: 2,
+    title:
+      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
+    description:
+      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    img: {
+      url: "./gallery/gallery-2.jpg",
+      alt: "Gallery 2"
+    },
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 2"
+    }
+  },
+  {
+    id: 3,
+    title:
+      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
+    description:
+      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 3"
+    },
+    img: {
+      url: "./gallery/gallery-3.jpg",
+      alt: "Gallery 2"
+    },
+  },
+];
+
 
 export const socialLinks = [
   {
@@ -357,35 +418,6 @@ export const helpLinks = [
   },
 ];
 
-export const galleryData = [
-  {
-    alt: "",
-    href: "#",
-    imgUrl: "./gallery/gallery-1.jpg",
-    heading:
-      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
-    description:
-      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
-  },
-  {
-    alt: "",
-    href: "#",
-    imgUrl: "./gallery/gallery-2.jpg",
-    heading:
-      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
-    description:
-      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
-  },
-  {
-    alt: "",
-    href: "#",
-    imgUrl: "./gallery/gallery-3.jpg",
-    heading:
-      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
-    description:
-      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
-  },
-];
 
 export const registerCardData = [
   {
