@@ -14,7 +14,7 @@ const Information = () => {
             {infoCardData.map(
               ({ title, imgUrl: iconUrl, description }, key) => (
                 <Col lg={6} md={6} sm={12} xs={12} key={key}>
-                  <InfoCard
+                  <InfoCard className="p-5"
                     title={title}
                     iconUrl={iconUrl}
                     cardTitleDir="row"

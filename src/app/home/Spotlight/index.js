@@ -139,7 +139,7 @@ const AppSlider = ({ data }) => {
 // Spot Light component
 function SpotLight({ data }) {
   return (
-    <AppSection id="spotlight" className="spotlight section-block-sm bg-light">
+    <AppSection id="spotlight" className="spotlight section-block-sm background-bg">
       <Container fluid="xxl">
         <AppSlider data={data} />
       </Container>

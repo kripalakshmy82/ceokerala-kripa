@@ -22,10 +22,10 @@ function AvatarInfoItem({
   direction = "column",
 }) {
   const columnClassName = classNames({
-    "d-flex flex-column": direction === "column",
+    "d-flex flex-column gap-3": direction === "column",
   });
   const rowClassName = classNames({
-    "d-flex flex-row": direction === "row",
+    "d-flex flex-row gap-3": direction === "row",
   });
 
   return (
