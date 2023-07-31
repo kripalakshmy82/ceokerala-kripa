@@ -27,35 +27,6 @@ AppCard.propTypes = {
   children: node.isRequired,
 };
 
-const PromoCard = ({ className = "", img, type = "promo" }) => {
-  const demoClassName = classNames({
-    "bg-theme": true,
-    "rounded-5": true,
-    "d-flex justify-content-center align-items-center": true,
-  });
-  return (
-    <AppCard className={className} cardType="default">
-      <AppBox className={demoClassName}>
-        {type === "promo" ? (
-          img && <Card.Img variant="top" src={img.url} alt={img.alt} />
-        ) : (
-          <p>counter card</p>
-        )}
-      </AppBox>
-    </AppCard>
-  );
-};
-
-PromoCard.propTypes = {
-  img: shape({
-    url: string,
-    alt: string,
-  }),
-  type: oneOf(["promo", "counter"]),
-  bgColor: bool,
-  className: string,
-};
-
 const InfoCard = ({
   title,
   description,
@@ -99,8 +70,8 @@ const InfoCard = ({
 };
 
 InfoCard.propTypes = {
-  title: node,
-  description: string,
+  title: string.isRequired,
+  description: string.isRequired,
   cardTitleDir: oneOf(["column", "row"]),
   iconWidth: oneOf(["full", "none"]),
   img: shape({
@@ -109,6 +80,35 @@ InfoCard.propTypes = {
   }),
   iconUrl: string,
   link: string,
+  className: string,
+};
+
+const PromoCard = ({ className = "", img, type = "promo" }) => {
+  const demoClassName = classNames({
+    "bg-theme": true,
+    "rounded-5": true,
+    "d-flex justify-content-center align-items-center": true,
+  });
+  return (
+    <AppCard className={className} cardType="default">
+      <AppBox className={demoClassName}>
+        {type === "promo" ? (
+          img && <Card.Img variant="top" src={img.url} alt={img.alt} />
+        ) : (
+          <p>counter card</p>
+        )}
+      </AppBox>
+    </AppCard>
+  );
+};
+
+PromoCard.propTypes = {
+  img: shape({
+    url: string,
+    alt: string,
+  }),
+  type: oneOf(["promo", "counter"]),
+  bgColor: bool,
   className: string,
 };
 

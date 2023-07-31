@@ -3,16 +3,14 @@
 import { Container, Row } from "react-bootstrap";
 import { AppCard, AppBox, AppSection, AppText } from "@/app/_components";
 
-import { votersCardData } from "@/app/data";
-
-function VoterCardItem({ alt, title, imgUrl }) {
+function VoterCardItem({ title, img: { url, alt } }) {
   return (
     <AppBox className="flex-fill d-flex align-items-center justify-content-center voter-h-card-item text-center">
       <AppText
         render={() => (
           <>
             <i className="gif-img d-inline-flex">
-              <img src={imgUrl} alt={alt} className="w-100" />
+              <img src={url} alt={alt} className="w-100" />
             </i>
           </>
         )}
@@ -31,7 +29,7 @@ function VoterCardItem({ alt, title, imgUrl }) {
   );
 }
 
-const VotersCard = () => {
+const VotersCard = ({ data }) => {
   return (
     <AppSection id="voters-card" className="voter-h-card-sec mt-4">
       <Container>
@@ -40,7 +38,7 @@ const VotersCard = () => {
             className="py-5 d-flex flex-lg-row flex-md-row flex-sm-column flex-column justify-content-between align-items-center"
             isShadow
           >
-            {votersCardData.map((vCd, key) => (
+            {data.map((vCd, key) => (
               <VoterCardItem {...vCd} key={key} />
             ))}
           </AppCard>

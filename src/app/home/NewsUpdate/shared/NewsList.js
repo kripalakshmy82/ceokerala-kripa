@@ -6,12 +6,9 @@ import classNames from "classnames";
 
 import { AppBox, AppCard, AppText, AppButton } from "@/app/_components";
 
-import { newsUpdate } from "@/app/data";
-
 // Use the default Pagination Component In react bootstrap
 // And change this in to an root component
 // url : https://react-bootstrap.netlify.app/docs/components/pagination
-
 function Pagination() {
   return (
     <div className="pagination-wrap">
@@ -81,7 +78,7 @@ const NewsListItem = ({ heading, description, href }) => {
   );
 };
 
-const NewsList = ({ activeKey }) => {
+const NewsList = ({ activeKey, data }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -99,7 +96,7 @@ const NewsList = ({ activeKey }) => {
         </AppBox>
       ) : (
         <>
-          {newsUpdate.map((news, key) => (
+          {data.map((news, key) => (
             <NewsListItem {...news} key={key} />
           ))}
           <Pagination />

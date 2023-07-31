@@ -1,14 +1,16 @@
 "use client";
 
-import { string, element, number, bool, oneOf } from "prop-types";
+import { string, number, bool, oneOf } from "prop-types";
+
 import classNames from "classnames";
+import ReactMarkdown from "react-markdown";
 
 import { Carousel } from "react-responsive-carousel";
 import { Container, Row, Col } from "react-bootstrap";
+
 import { AppSection, AppButton, AppBox, AppText } from "@/app/_components";
 
 import NewsTicker from "@/app/home/NewsTicker";
-import { sliderData } from "@/app/data";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -19,7 +21,14 @@ const AppSliderIntro = ({ heading, description, href }) => {
       <AppText
         render={() => (
           <>
-            <h2 className="mb-lg-4 mb-md-4 mb-sm-3 mb-3">{heading}</h2>
+            <h2 className="mb-lg-4 mb-md-4 mb-sm-3 mb-3">
+              <ReactMarkdown
+                children={heading}
+                components={{
+                  em: ({ node, ...props }) => <span {...props} />,
+                }}
+              />
+            </h2>
             <p className="mb-lg-5 mb-md-3 mb-sm-3 mb-3">{description}</p>
           </>
         )}
@@ -37,7 +46,7 @@ const AppSliderIntro = ({ heading, description, href }) => {
 };
 
 AppSliderIntro.propTypes = {
-  heading: element.isRequired,
+  heading: string.isRequired,
   description: string.isRequired,
   href: string.isRequired,
 };
@@ -82,7 +91,7 @@ SliderCampaginImage.propTypes = {
 };
 
 // AppSlider component
-const AppSlider = () => {
+const AppSlider = ({ data }) => {
   const settings = {
     showIndicators: true,
     showThumbs: false,
@@ -95,47 +104,40 @@ const AppSlider = () => {
 
   return (
     <Carousel {...settings}>
-      {sliderData.map(
-        ({ id, img_one, img_two, img_three, image_four, ...rest }) => (
-          <AppBox className="slide-item" key={id}>
-            <Row>
-              <Col className="col-lg-7 col-md-12 col-sm-12 col-12 d-flex align-items-center">
-                <AppSliderIntro {...rest} />
-              </Col>
-              <Col className="col-lg-5 col-md-5 col-sm-12 col-12 d-lg-block d-md-none d-sm-none d-none position-relative">
-                {[
-                  "./assets/spot-object-1.png",
-                  "./assets/spot-object-2.png",
-                  "./assets/spot-object-3.png",
-                ].map((spo, key) => (
-                  <SliderSpotObj url={spo} idx={key + 1} key={key} />
-                ))}
-                <AppBox className="campign-latest-image position-relative">
-                  <SliderCampaginImage
-                    {...img_one}
-                    idx={1}
-                    size="sm"
-                    floating
-                  />
-                  <SliderCampaginImage {...img_two} idx={2} size="sm" />
-                  <SliderCampaginImage {...img_three} idx={3} size="md" />
-                  <SliderCampaginImage {...image_four} idx={4} size="lg" />
-                </AppBox>
-              </Col>
-            </Row>
-          </AppBox>
-        )
-      )}
+      {data.map(({ id, img_one, img_two, img_three, image_four, ...rest }) => (
+        <AppBox className="slide-item" key={id}>
+          <Row>
+            <Col className="col-lg-7 col-md-12 col-sm-12 col-12 d-flex align-items-center">
+              <AppSliderIntro {...rest} />
+            </Col>
+            <Col className="col-lg-5 col-md-5 col-sm-12 col-12 d-lg-block d-md-none d-sm-none d-none position-relative">
+              {[
+                "./assets/spot-object-1.png",
+                "./assets/spot-object-2.png",
+                "./assets/spot-object-3.png",
+              ].map((spo, key) => (
+                <SliderSpotObj url={spo} idx={key + 1} key={key} />
+              ))}
+              <AppBox className="campign-latest-image position-relative">
+                <SliderCampaginImage {...img_one} idx={1} size="sm" floating />
+                <SliderCampaginImage {...img_two} idx={2} size="sm" />
+                <SliderCampaginImage {...img_three} idx={3} size="md" />
+                <SliderCampaginImage {...image_four} idx={4} size="lg" />
+              </AppBox>
+            </Col>
+          </Row>
+        </AppBox>
+      ))}
     </Carousel>
   );
 };
 
 // Spot Light component
-function SpotLight() {
+function SpotLight({ data }) {
   return (
     <AppSection id="spotlight" className="spotlight section-block-sm bg-light">
       <Container fluid="xxl">
-        <AppSlider />
+        <AppSlider data={data} />
       </Container>
       <NewsTicker />
     </AppSection>
