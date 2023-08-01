@@ -1,6 +1,9 @@
 import { string, node, bool, shape, oneOf } from "prop-types";
 import { Card } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
+import ReactMarkdown from "react-markdown";
 import classNames from "classnames";
 import { AppBox } from "../Elements";
 import AppButton from "../AppButton";
@@ -12,7 +15,7 @@ const AppCard = ({
   children,
 }) => {
   const appCardClassNames = classNames({
-    "theme-card": themeCard,
+    "theme-card overflow-hidden": themeCard,
     "rounded-theme flex-fill border-0 p-0 text-left bg-transparent app-card position-relative": true,
     "shadow-lg": isShadow,
     "card-item shadow-sm": cardType === "hover",
@@ -39,7 +42,8 @@ const InfoCard = ({
   className = "",
   link = {},
   playIcon = false,
-  themeCard = false
+  themeCard = false,
+  hoverCard = true
 }) => {
   const titleClassName = classNames({
     "d-flex gap-4 align-items-center": cardTitleDir === "row",
@@ -55,7 +59,7 @@ const InfoCard = ({
   });
 
   return (
-    <AppCard cardType="hover" themeCard={themeCard}>
+    <AppCard cardType={hoverCard ? "hover" : "default" } themeCard={themeCard}>
       {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
       {playIcon && (
         <span className="m-auto d-block position-absolute video-icon">
@@ -81,10 +85,24 @@ const InfoCard = ({
               <img src={iconUrl} className={iconClassName} />
             </span>
           )}
-          <h4 className="mb-3">{title}</h4>
+          <ReactMarkdown
+            children={title}
+            components={{
+              p: ({ node, ...props }) => <h4 className="mb-3" {...props} />,
+            }}
+          />
         </Card.Title>
-        <Card.Text className="mb-2 d-flex">{description}</Card.Text>
-        {link && <AppButton {...link} stretchedLink />}
+        {link?.type === "external" && (
+          <a href={link.href} className="stretched-link external-link" target="_blank" title={link.anchorTitle}>
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </a>
+        )}
+        {description && (
+          <Card.Text className="mb-2 d-flex">{description}</Card.Text>
+        )}
+        {link && link?.type !== "external" && (
+          <AppButton {...link} stretchedLink />
+        )}
       </Card.Body>
     </AppCard>
   );
@@ -92,7 +110,7 @@ const InfoCard = ({
 
 InfoCard.propTypes = {
   title: string.isRequired,
-  description: string.isRequired,
+  description: string,
   cardTitleDir: oneOf(["column", "row"]),
   iconWidth: oneOf(["full", "none"]),
   img: shape({
@@ -103,26 +121,24 @@ InfoCard.propTypes = {
   link: shape({
     href: string,
     anchorTitle: string,
+    type: string,
   }),
   className: string.isRequired,
   playIcon: bool,
   themeCard: bool,
+  hoverCard: bool
 };
 
-const PromoCard = ({ className = "", img, type = "promo" }) => {
-  const demoClassName = classNames({
+const PromoCard = ({ img }) => {
+  const promoCxWrapper = classNames({
     "bg-theme": true,
     "rounded-5": true,
     "d-flex justify-content-center align-items-center": true,
   });
   return (
-    <AppCard className={className} cardType="default">
-      <AppBox className={demoClassName}>
-        {type === "promo" ? (
-          img && <Card.Img variant="top" src={img.url} alt={img.alt} />
-        ) : (
-          <p>counter card</p>
-        )}
+    <AppCard cardType="default">
+      <AppBox className={promoCxWrapper}>
+        <Card.Img variant="top" src={img.url} alt={img.alt} />
       </AppBox>
     </AppCard>
   );
@@ -132,10 +148,7 @@ PromoCard.propTypes = {
   img: shape({
     url: string,
     alt: string,
-  }),
-  type: oneOf(["promo", "counter"]),
-  bgColor: bool,
-  className: string,
+  }).isRequired,
 };
 
 export default AppCard;

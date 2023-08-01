@@ -1,17 +1,9 @@
 "use client";
 
 import { Container, Row, Col } from "react-bootstrap";
-import { AppSection, AppBox, InfoCard } from "@/app/_components";
+import { AppSection, AppBox, InfoCard, AppCard } from "@/app/_components";
 
-const rollUpdateData = {
-  alt: "image",
-  imgUrl: "./assets/icon-link.png",
-  title: "Electoral roll Continuous Updating with Suppliment",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
-};
-
-const EnrollUpdation = () => {
+const EnrollUpdation = ({ data }) => {
   return (
     <AppSection
       id="enroll-update"
@@ -21,14 +13,16 @@ const EnrollUpdation = () => {
         <Container>
           <Row>
             <Col lg={12}>
-              <InfoCard
-                alt={rollUpdateData.alt}
-                iconUrl={rollUpdateData.imgUrl}
-                title={rollUpdateData.title}
-                cardTitleDir="row"
-                className="align-items-center"
-                description={rollUpdateData.description}
-              />
+              <AppCard isShadow>
+                <AppBox className="p-5 col-lg-8 offset-lg-2 d-flex justify-content-center align-items-center">
+                  <InfoCard
+                    {...data}
+                    cardTitleDir="row"
+                    className="p-5"
+                    hoverCard={false}
+                  />
+                </AppBox>
+              </AppCard>
             </Col>
           </Row>
         </Container>

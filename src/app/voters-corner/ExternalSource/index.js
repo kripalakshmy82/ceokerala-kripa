@@ -3,9 +3,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { AppSection, AppBox, InfoCard } from "@/app/_components";
 
-import { externalCardData } from "@/app/data";
-
-const ExternalSource = () => {
+const ExternalSource = ({ data }) => {
   return (
     <AppSection
       id="external-source"
@@ -14,9 +12,9 @@ const ExternalSource = () => {
       <AppBox className="external-source-box">
         <Container>
           <Row>
-            {externalCardData.map(({ ...rest }, key) => (
+            {data.map(({ ...rest }, key) => (
               <Col lg={6} md={6} sm={12} xs={12} key={key}>
-                <InfoCard {...rest} className="theme-card overflow-hidden" />
+                <InfoCard className="px-4 py-4" {...rest} />
               </Col>
             ))}
           </Row>
