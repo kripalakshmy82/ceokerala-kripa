@@ -8,6 +8,11 @@ import Officers from "./shared/Officers";
 
 import { ceoCardData, officersData, promoCardData } from "../data";
 
+export const metadata = {
+  title: "CEO Desk",
+  description: "election-commission-kerala",
+};
+
 const CeoDesk = () => {
   const components = [
     [
