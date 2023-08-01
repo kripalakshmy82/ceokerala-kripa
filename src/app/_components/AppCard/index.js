@@ -43,10 +43,11 @@ const InfoCard = ({
   link = {},
   playIcon = false,
   themeCard = false,
-  hoverCard = true
+  hoverCard = true,
 }) => {
   const titleClassName = classNames({
     "d-flex gap-4 align-items-center": cardTitleDir === "row",
+    "justify-content-between": link?.type === "external",
   });
 
   const iconWrapperClassName = classNames({
@@ -59,7 +60,7 @@ const InfoCard = ({
   });
 
   return (
-    <AppCard cardType={hoverCard ? "hover" : "default" } themeCard={themeCard}>
+    <AppCard cardType={hoverCard ? "hover" : "default"} themeCard={themeCard}>
       {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
       {playIcon && (
         <span className="m-auto d-block position-absolute video-icon">
@@ -91,12 +92,17 @@ const InfoCard = ({
               p: ({ node, ...props }) => <h4 className="mb-3" {...props} />,
             }}
           />
+          {link?.type === "external" && (
+            <a
+              href={link.href}
+              className="stretched-link external-link"
+              target="_blank"
+              title={link.anchorTitle}
+            >
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            </a>
+          )}
         </Card.Title>
-        {link?.type === "external" && (
-          <a href={link.href} className="stretched-link external-link" target="_blank" title={link.anchorTitle}>
-            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-          </a>
-        )}
         {description && (
           <Card.Text className="mb-2 d-flex">{description}</Card.Text>
         )}
@@ -126,7 +132,7 @@ InfoCard.propTypes = {
   className: string.isRequired,
   playIcon: bool,
   themeCard: bool,
-  hoverCard: bool
+  hoverCard: bool,
 };
 
 const PromoCard = ({ img }) => {
