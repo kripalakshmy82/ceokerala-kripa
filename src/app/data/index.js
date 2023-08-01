@@ -549,18 +549,10 @@ export const enRollUpdation = {
 // End Voters Corner Data
 
 
-export const eHistoryBnrData = {
-  link: "#",
-  heading: (
-    <>
-      Election <span>History</span>
-    </>
-  ),
-  currentTitle: "election-history",
-};
-
-export const historyListItem = [
+// Election History Page Data
+export const electionHistoryNews = [
   {
+    id: 1,
     img: {
       url: "./assets/icon-avatar.png",
       alt: "image",
@@ -573,16 +565,13 @@ export const historyListItem = [
         annotation: "(INC)",
       },
     },
-
     link: {
       href: "#",
       anchorTitle: "Gallery 1",
-    },
-    icon: {
-      url: "./assets/icon-avatar.png",
     },
   },
   {
+    id: 2,
     img: {
       url: "./assets/icon-avatar.png",
       alt: "image",
@@ -595,16 +584,13 @@ export const historyListItem = [
         annotation: "(INC)",
       },
     },
-
     link: {
       href: "#",
       anchorTitle: "Gallery 1",
-    },
-    icon: {
-      url: "./assets/icon-avatar.png",
     },
   },
   {
+    id: 3,
     img: {
       url: "./assets/icon-avatar.png",
       alt: "image",
@@ -617,16 +603,13 @@ export const historyListItem = [
         annotation: "(INC)",
       },
     },
-
     link: {
       href: "#",
       anchorTitle: "Gallery 1",
-    },
-    icon: {
-      url: "./assets/icon-avatar.png",
     },
   },
   {
+    id: 4,
     img: {
       url: "./assets/icon-avatar.png",
       alt: "image",
@@ -639,16 +622,13 @@ export const historyListItem = [
         annotation: "(INC)",
       },
     },
-
     link: {
       href: "#",
       anchorTitle: "Gallery 1",
-    },
-    icon: {
-      url: "./assets/icon-avatar.png",
     },
   },
   {
+    id: 5,
     img: {
       url: "./assets/icon-avatar.png",
       alt: "image",
@@ -661,20 +641,121 @@ export const historyListItem = [
         annotation: "(INC)",
       },
     },
-
     link: {
       href: "#",
       anchorTitle: "Gallery 1",
-    },
-    icon: {
-      url: "./assets/icon-avatar.png",
     },
   },
 ];
 
+export const electionHistoryNews2 = [
+  {
+    id: 1,
+    img: {
+      url: "./assets/icon-avatar.png",
+      alt: "image",
+    },
+    name: "Candidate Name",
+    additionalInfo: {
+      party: {
+        area: "Thiruvanathapuram",
+        name: "Indian National Congress",
+        annotation: "(INC)",
+        icon: "./icons/flag.svg"
+      },
+    },
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 1",
+    },
+  },
+  {
+    id: 2,
+    img: {
+      url: "./assets/icon-avatar.png",
+      alt: "image",
+    },
+    name: "Candidate Name",
+    additionalInfo: {
+      party: {
+        area: "Thiruvanathapuram",
+        name: "Indian National Congress",
+        annotation: "(INC)",
+        icon: "./icons/flag.svg"
+      },
+    },
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 1",
+    },
+  },
+  {
+    id: 3,
+    img: {
+      url: "./assets/icon-avatar.png",
+      alt: "image",
+    },
+    name: "Candidate Name",
+    additionalInfo: {
+      party: {
+        area: "Thiruvanathapuram",
+        name: "Indian National Congress",
+        annotation: "(INC)",
+        icon: "./icons/flag.svg"
+      },
+    },
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 1",
+    },
+  },
+  {
+    id: 4,
+    img: {
+      url: "./assets/icon-avatar.png",
+      alt: "image",
+    },
+    name: "Candidate Name",
+    additionalInfo: {
+      party: {
+        area: "Thiruvanathapuram",
+        name: "Indian National Congress",
+        annotation: "(INC)",
+        icon: "./icons/flag.svg"
+      },
+    },
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 1",
+    },
+  },
+  {
+    id: 5,
+    img: {
+      url: "./assets/icon-avatar.png",
+      alt: "image",
+    },
+    name: "Candidate Name",
+    additionalInfo: {
+      party: {
+        area: "Thiruvanathapuram",
+        name: "Indian National Congress",
+        annotation: "(INC)",
+        icon: "./icons/flag.svg"
+      },
+    },
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 1",
+    },
+  },
+]
+
 export const electionCategoryData = [
   {
-    title: "Kerala Lok Sabha Election Results 2019",
+    id: 1,
+    title: `Kerala Lok Sabha  
+    Election Results 2019`,
     description: "There are many variations of passages of Lorem Ipsum available,",
     link: {
       href: "#",
@@ -684,7 +765,9 @@ export const electionCategoryData = [
     iconUrl: "./assets/icon-avatar.png"
   },
   {
-    title: "Kerala Lok Sabha Election Results 2019",
+    id: 2,
+    title: `Kerala Lok Sabha  
+    Election Results 2019`,
     description: "There are many variations of passages of Lorem Ipsum available,",
     link: {
       href: "#",
@@ -694,7 +777,9 @@ export const electionCategoryData = [
     iconUrl: "./assets/icon-avatar.png"
   },
   {
-    title: "Kerala Lok Sabha Election Results 2019",
+    id: 3,
+    title: `Kerala Lok Sabha  
+    Election Results 2019`,
     description: "There are many variations of passages of Lorem Ipsum available,",
     link: {
       href: "#",
@@ -704,7 +789,9 @@ export const electionCategoryData = [
     iconUrl: "./assets/icon-avatar.png"
   },
   {
-    title: "Kerala Lok Sabha Election Results 2019",
+    id: 4,
+    title: `Kerala Lok Sabha  
+    Election Results 2019`,
     description: "There are many variations of passages of Lorem Ipsum available,",
     link: {
       href: "#",

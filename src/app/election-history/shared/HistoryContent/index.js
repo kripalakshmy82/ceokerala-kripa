@@ -10,7 +10,7 @@ import AppTabSwitcher, {
   AppTabContent,
 } from "@/app/_components/AppTab";
 
-import HistoryList from "./HistoryList";
+import HistoryList from "./components/HistoryList";
 
 // election history tab navigation
 const electionHistoryTabNavigation = [
@@ -28,7 +28,7 @@ const electionHistoryTabNavigation = [
   },
 ];
 
-const HistoryNav = () => {
+const HistoryContent = ({ data }) => {
   const historyTitlecx = classNames({
     "news-title-section": true,
     "d-flex": true,
@@ -65,7 +65,7 @@ const HistoryNav = () => {
               </AppBox>
             </AppBox>
             <AppTabContent
-              render={(activeTabID) => <HistoryList activeKey={activeTabID} />}
+              render={(activeTabID) => <HistoryList activeKey={activeTabID} data={data} />}
             />
           </AppTabContainer>
         </AppTabSwitcher>
@@ -74,4 +74,4 @@ const HistoryNav = () => {
   );
 };
 
-export default HistoryNav;
+export default HistoryContent;

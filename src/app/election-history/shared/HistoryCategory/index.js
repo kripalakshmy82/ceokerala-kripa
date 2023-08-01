@@ -1,7 +1,7 @@
 "use client";
 
-import { Container } from "react-bootstrap";
-import { AppSection, AppBox, AppText } from "@/app/_components";
+import { Container, Row, Col } from "react-bootstrap";
+import { AppSection, AppBox, AppText, InfoCard } from "@/app/_components";
 import AppTabSwitcher, {
   AppTabContainer,
   AppTabNavigation,
@@ -9,8 +9,6 @@ import AppTabSwitcher, {
 } from "@/app/_components/AppTab";
 
 import classNames from "classnames";
-import { electionCategoryData } from "@/app/data";
-import ElectionCategoryList from "./ElectionCategoryList";
 
 // electionCategory tab navigation
 const electionCategoryTabNavigation = [
@@ -27,6 +25,19 @@ const electionCategoryTabNavigation = [
     title: "During Election",
   },
 ];
+
+const ElectionCategoryList = ({ data }) => {
+  return (
+    <Row>
+      {data.map((items, key) => (
+        <Col lg={3} md={4} xs={12} key={key}>
+          <InfoCard className="py-5 px-4" cardTitleDir="column" {...items} />
+        </Col>
+      ))}
+    </Row>
+  );
+};
+
 function SectionTitle() {
   return (
     <AppBox className="flex-block">
@@ -39,7 +50,7 @@ function SectionTitle() {
   );
 }
 
-const ElectionHistoryCategory = () => {
+const HistoryCategory = ({ data }) => {
   const sectionTitlecx = classNames({
     "news-title-section": true,
     "d-flex": true,
@@ -51,8 +62,12 @@ const ElectionHistoryCategory = () => {
   const navTabcx = classNames({
     "flex-block flex-block-links d-flex": true,
   });
+
   return (
-    <AppSection id="election-category" className="pre-election section-block-md">
+    <AppSection
+      id="election-category"
+      className="pre-election section-block-md"
+    >
       <Container>
         <AppTabSwitcher activeKey="pre-election">
           <AppTabContainer id="election-category-tabs">
@@ -68,7 +83,7 @@ const ElectionHistoryCategory = () => {
               render={(activeTabID) => (
                 <ElectionCategoryList
                   activeKey={activeTabID}
-                  data={electionCategoryData}
+                  data={data}
                 />
               )}
             />
@@ -79,4 +94,4 @@ const ElectionHistoryCategory = () => {
   );
 };
 
-export default ElectionHistoryCategory;
+export default HistoryCategory;
