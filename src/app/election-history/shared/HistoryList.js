@@ -11,6 +11,67 @@ import "slick-carousel/slick/slick-theme.css";
 import { AppBox, AvatarInfo } from "@/app/_components";
 
 import { historyListItem } from "@/app/data";
+<<<<<<< HEAD
+=======
+import classNames from "classnames";
+
+function AvatarInfoItem({
+  img,
+  heading,
+  place,
+  party,
+  link,
+  direction = "column",
+}) {
+  const columnClassName = classNames({
+    "d-flex flex-column gap-3": direction === "column",
+  });
+  const rowClassName = classNames({
+    "d-flex flex-row gap-3": direction === "row",
+  });
+
+  return (
+    <AppCard cardType="hover" className="p-4">
+      <div className={direction === "column" ? columnClassName : rowClassName}>
+        <div className="info-image">
+          {img && <Card.Img variant="top" src={img.url} alt={img.alt}/>}
+        </div>
+        <div className="info-content">
+          <AppText render={() => <h4>{heading}</h4>} />
+          <AppText render={() => <h5>{place}</h5>} />
+          <AppText render={() => <h6>{party}</h6>} />
+          {link && <a href={link} className="stretched-link"></a>}
+        </div>
+      </div>
+    </AppCard>
+  );
+}
+
+AvatarInfoItem.propTypes = {
+  heading: string,
+  place: string,
+  party: node,
+  img: shape({
+    url: string,
+    alt: string,
+  }),
+  link: string,
+  direction: oneOf(["column", "row"]),
+};
+
+const HistoryListItem = ({ img, party, place, heading, link }) => {
+  return (
+    <AvatarInfoItem
+      heading={heading}
+      img={img}
+      place={place}
+      party={party}
+      link={link}
+      direction="column"
+    />
+  );
+};
+>>>>>>> cc58578f78581456964d6f5cc55910e6b4a5eb36
 
 const HistoryList = ({ activeKey }) => {
   const [loading, setLoading] = useState(true);

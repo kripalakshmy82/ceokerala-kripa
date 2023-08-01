@@ -29,7 +29,7 @@ const footDesc = {
 
 const Footer = () => {
   return (
-    <footer className="bg-dark pt-5">
+    <footer className="theme-bg-dark pt-5">
       <Container>
         <Row>
           <div className="d-flex flex-row justify-content-between align-items-center mb-5">
