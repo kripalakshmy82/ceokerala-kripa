@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Spinner } from "react-bootstrap";
 import classNames from "classnames";
 
 import {
@@ -49,7 +47,7 @@ const NewsListItem = ({
   );
 };
 
-const NewsList = ({ activeKey, data }) => {
+const NewsList = ({ data }) => {
   return (
     <>
       {data.map((news, key) => (
