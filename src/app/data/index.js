@@ -671,3 +671,46 @@ export const historyListItem = [
     },
   },
 ];
+
+export const electionCategoryData = [
+  {
+    title: "Kerala Lok Sabha Election Results 2019",
+    description: "There are many variations of passages of Lorem Ipsum available,",
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
+    iconUrl: "./assets/icon-avatar.png"
+  },
+  {
+    title: "Kerala Lok Sabha Election Results 2019",
+    description: "There are many variations of passages of Lorem Ipsum available,",
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
+    iconUrl: "./assets/icon-avatar.png"
+  },
+  {
+    title: "Kerala Lok Sabha Election Results 2019",
+    description: "There are many variations of passages of Lorem Ipsum available,",
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
+    iconUrl: "./assets/icon-avatar.png"
+  },
+  {
+    title: "Kerala Lok Sabha Election Results 2019",
+    description: "There are many variations of passages of Lorem Ipsum available,",
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
+    iconUrl: "./assets/icon-avatar.png"
+  },
+];

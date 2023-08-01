@@ -19,7 +19,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 function SelectBasicExample() {
   return (
-    <Form.Select aria-label="select year">
+    <Form.Select aria-label="select year" className="border-0">
       <option value="1">2000 - 2010</option>
       <option value="2">2010 - 2014</option>
       <option value="3">2014 - 2020</option>
@@ -73,15 +73,20 @@ const HistoryElection = () => {
             <AppBox className="section-heading">
               <AppText render={() => <h3>Election History</h3>} />
             </AppBox>
-            <AppBox className="area-block d-flex flex-row gap-2">
-              <AppText
-                render={() => <h6 className="mb-0">Select the year</h6>}
-              />
-              <SelectBasicExample />
+            <AppBox className="area-block d-flex flex-row gap-2 align-items-center">
+              <AppBox className="text-box">
+                <AppText
+                  render={() => <h6 className="mb-0">Select the year</h6>}
+                />
+              </AppBox>
+              <AppBox className="select-box">
+                <SelectBasicExample />
+              </AppBox>
+              
             </AppBox>
           </AppBox>
           <AppBox className="history-election">
-            <Slider {...settings} className="history-carousel">
+            <Slider {...settings} className="history-carousel carousel-common">
               {historyListItem.map(({ ...rest }, key) => (
                 <AppBox className="py-5 rounded-3 shadow-sm" key={key}>
                   <AvatarInfo {...rest} direction="row" />

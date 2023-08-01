@@ -65,7 +65,7 @@ const HistoryList = ({ activeKey }) => {
       ) : (
         <>
           <Row>
-            <Slider {...settings} className="history-carousel">
+            <Slider {...settings} className="history-carousel carousel-common">
               {historyListItem.map(({ ...rest }, key) => (
                 <Col key={key}>
                   <AvatarInfo {...rest} direction="column" />
