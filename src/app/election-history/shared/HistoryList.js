@@ -1,16 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { string, oneOf, node, shape } from "prop-types";
-import { Row, Col, Spinner, Card } from "react-bootstrap";
+//import { string, oneOf, node, shape } from "prop-types";
+import { Row, Col, Spinner } from "react-bootstrap";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { AppCard, AppBox, AppText } from "@/app/_components";
+import { AppBox, AvatarInfo } from "@/app/_components";
 
 import { historyListItem } from "@/app/data";
+<<<<<<< HEAD
+=======
 import classNames from "classnames";
 
 function AvatarInfoItem({
@@ -69,6 +71,7 @@ const HistoryListItem = ({ img, party, place, heading, link }) => {
     />
   );
 };
+>>>>>>> cc58578f78581456964d6f5cc55910e6b4a5eb36
 
 const HistoryList = ({ activeKey }) => {
   const [loading, setLoading] = useState(true);
@@ -124,9 +127,9 @@ const HistoryList = ({ activeKey }) => {
         <>
           <Row>
             <Slider {...settings} className="history-carousel">
-              {historyListItem.map((history, key) => (
+              {historyListItem.map(({ ...rest }, key) => (
                 <Col key={key}>
-                  <HistoryListItem {...history} />
+                  <AvatarInfo {...rest} direction="column" />
                 </Col>
               ))}
             </Slider>
