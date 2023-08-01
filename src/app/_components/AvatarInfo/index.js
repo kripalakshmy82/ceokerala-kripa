@@ -19,16 +19,29 @@ const AvatarInfo = ({
     "flex-row justify-content-center align-items-center": direction === "row",
     "align-items-center flex-column": direction === "column",
   });
+
   const textAlignCx = classNames({
-    "text-center" : direction === "column",
-    "text-start"  : direction === "row",
-  })
+    "text-center": direction === "column",
+    "text-start": direction === "row",
+  });
+
+  const avatarImgCx = classNames({
+    "avatar-img": true,
+    "position-relative": additionalInfo?.party?.icon,
+  });
 
   return (
     <AppBox className={avatarInfoCx}>
-      <AppBox className="avatar-img">
+      <AppBox className={avatarImgCx}>
         <Image src={img.url} alt={img.alt} className="w-100" roundedCircle />
-        {additionalInfo && additionalInfo?.icon && <p>Icon Component</p>}
+        {additionalInfo && additionalInfo?.party?.icon && (
+          <img
+            src={additionalInfo?.party?.icon}
+            className="position-absolute"
+            style={{ bottom: 0, right: 0 }}
+            alt=""
+          />
+        )}
       </AppBox>
       <AppBox className={textAlignCx}>
         <AppText render={() => <h5 className="fw-bold">{name}</h5>} />

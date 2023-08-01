@@ -5,19 +5,18 @@ import {
   AppSection,
   AppBox,
   AppText,
-  AvatarInfo,
   AppButton,
-  AppCard,
-  AppSelect,
+  InfoCard
 } from "@/app/_components";
 
 import classNames from "classnames";
 
 import Slider from "react-slick";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const HistoryElection = ({ data }) => {
+const Archive = ({ data }) => {
   const settings = {
     dots: false,
     arrows: true,
@@ -53,37 +52,25 @@ const HistoryElection = ({ data }) => {
   };
 
   const sectionHeadingCx = classNames({
-    "d-flex justify-content-between align-items-center": true,
+    "news-title-section": true,
+    "d-flex": true,
+    "flex-row": true,
+    "justify-content-between align-items-center": true,
+    "mb-3 mb-lg-5 mb-md-5 mb-sm-4": true,
   });
-
+  
   return (
-    <AppSection id="history" className="section-block-sm history-election">
+    <AppSection id="archives" className="section-block-sm archives-election">
       <Container>
         <AppBox className={sectionHeadingCx}>
           <AppBox className="section-heading">
-            <AppText render={() => <h3>Election History</h3>} />
-          </AppBox>
-          <AppBox className="area-block d-flex flex-row gap-2 align-items-center">
-            <AppBox className="text-box">
-              <AppText
-                render={() => <h6 className="mb-0">Select the year</h6>}
-              />
-            </AppBox>
-            <AppBox className="select-box">
-              <AppSelect
-                options={["2000 - 2010", "2010 - 2014", "2014 - 2020"]}
-              />
-            </AppBox>
+            <AppText render={() => <h3>Archives</h3>} />
           </AppBox>
         </AppBox>
         <AppBox className="history-election">
           <Slider {...settings} className="history-carousel carousel-common">
-            {data.map(({ id, ...rest }) => (
-              <AppCard key={id} cardType="hover">
-                <AppBox className="p-5">
-                  <AvatarInfo {...rest} direction="row" />
-                </AppBox>
-              </AppCard>
+            {data.map(({id, ...rest }) => (
+              <InfoCard key={id} className="py-5 px-4" cardTitleDir="column" {...rest} />
             ))}
           </Slider>
         </AppBox>
@@ -100,4 +87,4 @@ const HistoryElection = ({ data }) => {
   );
 };
 
-export default HistoryElection;
+export default Archive;

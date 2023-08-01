@@ -1,8 +1,9 @@
 import { createElement } from "react";
 
 import DetailBanner from "@/app/_components/DetailBanner";
+import Promotion from "@/app/_components/Promotion";
+
 import VoterRegistration from "./VoterRegistration";
-import Promotion from "./Promotion";
 import Information from "./Information";
 import ExternalSource from "./ExternalSource";
 import EnrollUpdation from "./EnrollUpdation";
@@ -25,7 +26,7 @@ function VotersCorner() {
   const components = [
     [DetailBanner, { heading: "Voters *Corner*", link: "#", currentTitle: "voters-corner"}],
     [VoterRegistration, { data :  registerCardData}],
-    [Promotion, { data : promoCardData}],
+    [Promotion, { ...promoCardData }],
     [Information, { data: infoCardData}],
     [ExternalSource, { data: externalCardData}],
     [EnrollUpdation, { data: enRollUpdation}]
