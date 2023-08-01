@@ -489,7 +489,7 @@ export const infoCardData = [
     iconUrl: "./assets/icon-home.png",
   },
   {
-    id : 2,
+    id: 2,
     title: `Know your  
     Booth Level Officers (BLO)`,
     description:
@@ -514,7 +514,7 @@ export const externalCardData = [
       href: "#",
       anchorTitle: "Electoral Roll",
       title: "Electoral Roll",
-      type: "external"
+      type: "external",
     },
   },
   {
@@ -533,21 +533,20 @@ export const externalCardData = [
   },
 ];
 
-
 export const enRollUpdation = {
   title: `Electoral roll Continuous Updating  
   with Supplement ( w.r.t 01.07.2023)`,
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
   iconUrl: "./assets/icon-link.png",
   link: {
     href: "#",
     anchorTitle: "Search in Roll",
     title: "Search in Roll",
   },
-}
+};
 
 // End Voters Corner Data
-
 
 // Election History Page Data
 export const electionHistoryNews = [
@@ -661,7 +660,7 @@ export const electionHistoryNews2 = [
         area: "Thiruvanathapuram",
         name: "Indian National Congress",
         annotation: "(INC)",
-        icon: "./icons/flag.svg"
+        icon: "./icons/flag.svg",
       },
     },
     link: {
@@ -681,7 +680,7 @@ export const electionHistoryNews2 = [
         area: "Thiruvanathapuram",
         name: "Indian National Congress",
         annotation: "(INC)",
-        icon: "./icons/flag.svg"
+        icon: "./icons/flag.svg",
       },
     },
     link: {
@@ -701,7 +700,7 @@ export const electionHistoryNews2 = [
         area: "Thiruvanathapuram",
         name: "Indian National Congress",
         annotation: "(INC)",
-        icon: "./icons/flag.svg"
+        icon: "./icons/flag.svg",
       },
     },
     link: {
@@ -721,7 +720,7 @@ export const electionHistoryNews2 = [
         area: "Thiruvanathapuram",
         name: "Indian National Congress",
         annotation: "(INC)",
-        icon: "./icons/flag.svg"
+        icon: "./icons/flag.svg",
       },
     },
     link: {
@@ -741,7 +740,7 @@ export const electionHistoryNews2 = [
         area: "Thiruvanathapuram",
         name: "Indian National Congress",
         annotation: "(INC)",
-        icon: "./icons/flag.svg"
+        icon: "./icons/flag.svg",
       },
     },
     link: {
@@ -749,56 +748,60 @@ export const electionHistoryNews2 = [
       anchorTitle: "Gallery 1",
     },
   },
-]
+];
 
 export const electionCategoryData = [
   {
     id: 1,
     title: `Kerala Lok Sabha  
     Election Results 2019`,
-    description: "There are many variations of passages of Lorem Ipsum available,",
+    description:
+      "There are many variations of passages of Lorem Ipsum available,",
     link: {
       href: "#",
       title: "Read More",
       anchorTitle: "Read More",
     },
-    iconUrl: "./assets/icon-avatar.png"
+    iconUrl: "./assets/icon-avatar.png",
   },
   {
     id: 2,
     title: `Kerala Lok Sabha  
     Election Results 2019`,
-    description: "There are many variations of passages of Lorem Ipsum available,",
+    description:
+      "There are many variations of passages of Lorem Ipsum available,",
     link: {
       href: "#",
       title: "Read More",
       anchorTitle: "Read More",
     },
-    iconUrl: "./assets/icon-avatar.png"
+    iconUrl: "./assets/icon-avatar.png",
   },
   {
     id: 3,
     title: `Kerala Lok Sabha  
     Election Results 2019`,
-    description: "There are many variations of passages of Lorem Ipsum available,",
+    description:
+      "There are many variations of passages of Lorem Ipsum available,",
     link: {
       href: "#",
       title: "Read More",
       anchorTitle: "Read More",
     },
-    iconUrl: "./assets/icon-avatar.png"
+    iconUrl: "./assets/icon-avatar.png",
   },
   {
     id: 4,
     title: `Kerala Lok Sabha  
     Election Results 2019`,
-    description: "There are many variations of passages of Lorem Ipsum available,",
+    description:
+      "There are many variations of passages of Lorem Ipsum available,",
     link: {
       href: "#",
       title: "Read More",
       anchorTitle: "Read More",
     },
-    iconUrl: "./assets/icon-avatar.png"
+    iconUrl: "./assets/icon-avatar.png",
   },
 ];
 
@@ -891,6 +894,130 @@ export const electionGalleryData = [
     img: {
       url: "./gallery/gallery-3.jpg",
       alt: "Gallery 2",
+    },
+  },
+];
+
+export const archives = [
+  {
+    id: 1,
+    title: `Kerala Lok Sabha  
+    Election Results 2019`,
+    description:
+      "There are many variations of passages of Lorem Ipsum available,",
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
+    iconUrl: "./assets/icon-avatar.png",
+  },
+  {
+    id: 2,
+    title: `Kerala Lok Sabha  
+    Election Results 2019`,
+    description:
+      "There are many variations of passages of Lorem Ipsum available,",
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
+    iconUrl: "./assets/icon-avatar.png",
+  },
+  {
+    id: 3,
+    title: `Kerala Lok Sabha  
+    Election Results 2019`,
+    description:
+      "There are many variations of passages of Lorem Ipsum available,",
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
+    iconUrl: "./assets/icon-avatar.png",
+  },
+  {
+    id: 4,
+    title: `Kerala Lok Sabha  
+    Election Results 2019`,
+    description:
+      "There are many variations of passages of Lorem Ipsum available,",
+    link: {
+      href: "#",
+      title: "Read More",
+      anchorTitle: "Read More",
+    },
+    iconUrl: "./assets/icon-avatar.png",
+  },
+];
+
+export const misc = [
+  {
+    id: 1,
+    title: `Bye-Election Results  
+    -LAC`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    link: {
+      href: "#",
+      anchorTitle: "Polling Booth",
+    },
+    iconUrl: "./assets/icon-home.png",
+  },
+  {
+    id: 2,
+    title: `Bye-Election Results  
+    -HPC`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    iconUrl: "./assets/icon-avatar.png",
+    link: {
+      href: "#",
+      anchorTitle: "Polling Booth",
+    },
+  },
+];
+
+export const ceoCardData = {
+  name: "Sanjay Kaul IAS",
+  designation: "Chief election commissioner",
+  img: {
+    url: "./assets/icon-avatar.png",
+    alt: "image",
+  },
+  link: {
+    href: "#",
+    anchorTitle: "Sanjay Kaul IAS",
+  },
+  description:
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+};
+
+export const officersData = [
+  {
+    name: "Rajiv Kumar",
+    designation: "Chief election commissioner",
+    img: {
+      url: "./assets/icon-avatar.png",
+      alt: "image",
+    },
+  },
+  {
+    name: "S.H. Anup Chandra Pandey",
+    designation: "Chief election commissioner",
+    img: {
+      url: "./assets/icon-avatar.png",
+      alt: "image",
+    },
+  },
+  {
+    name: "SH. Arun Goel",
+    designation: "Chief election commissioner",
+    img: {
+      url: "./assets/icon-avatar.png",
+      alt: "image",
     },
   },
 ];

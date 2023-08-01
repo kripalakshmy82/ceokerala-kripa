@@ -37,8 +37,8 @@ function ElectionHistory() {
     [HistoryElection, { data: electionHistoryNews2 }],
     [HistoryCategory, { data: electionCategoryData }],
     [Promotion, { ...promoCardData }],
-    // [Archive, { data: archives }],
-    // [Misc, { data: misc }],
+    [Archive, { data: archives }],
+    [Misc, { data: misc }],
   ];
 
   return components.map(([Component, props]) =>
