@@ -7,7 +7,7 @@ import AppButton from "../AppButton";
 
 const AppCard = ({ isShadow = false, cardType = "default", children }) => {
   const appCardClassNames = classNames({
-    "rounded-theme flex-fill border-0 p-0 text-left bg-transparent app-card position-relative": true,
+    "overflow-hidden rounded-theme flex-fill border-0 p-0 text-left bg-transparent app-card position-relative": true,
     "shadow-lg": isShadow,
     "card-item shadow-sm": cardType === "hover",
   });
@@ -31,7 +31,7 @@ const InfoCard = ({
   iconUrl = "",
   className = "",
   link = {},
-  playIcon
+  playIcon,
 }) => {
   const titleClassName = classNames({
     "d-flex gap-4 align-items-center": cardTitleDir === "row",
@@ -49,7 +49,7 @@ const InfoCard = ({
   return (
     <AppCard cardType="hover">
       {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
-      { playIcon && (
+      {playIcon && (
         <span className="m-auto d-block position-absolute video-icon">
           <svg
             viewBox="0 0 24 24"

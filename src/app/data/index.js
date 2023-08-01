@@ -302,12 +302,12 @@ export const galleryData = [
       "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
     img: {
       url: "./gallery/gallery-1.jpg",
-      alt: "Gallery 1"
+      alt: "Gallery 1",
     },
     link: {
       href: "#",
-      anchorTitle: "Gallery 1"
-    }
+      anchorTitle: "Gallery 1",
+    },
   },
   {
     id: 2,
@@ -317,12 +317,12 @@ export const galleryData = [
       "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
     img: {
       url: "./gallery/gallery-2.jpg",
-      alt: "Gallery 2"
+      alt: "Gallery 2",
     },
     link: {
       href: "#",
-      anchorTitle: "Gallery 2"
-    }
+      anchorTitle: "Gallery 2",
+    },
   },
   {
     id: 3,
@@ -332,15 +332,14 @@ export const galleryData = [
       "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
     link: {
       href: "#",
-      anchorTitle: "Gallery 3"
+      anchorTitle: "Gallery 3",
     },
     img: {
       url: "./gallery/gallery-3.jpg",
-      alt: "Gallery 2"
+      alt: "Gallery 2",
     },
   },
 ];
-
 
 export const socialLinks = [
   {
@@ -417,7 +416,6 @@ export const helpLinks = [
     title: "Election Commission of Kerala",
   },
 ];
-
 
 export const registerCardData = [
   {
@@ -552,79 +550,109 @@ export const historyListItem = [
       url: "./assets/icon-avatar.png",
       alt: "image",
     },
-    heading: "Sample Name",
-    place: "Idukki",
-    party: (
-      <>
-        Sample Party
-        <span>(sample title)</span>
-      </>
-    ),
-    link: "#",
-    iconUrl: "./assets/icon-avatar.png",
+    name: "Candidate Name",
+    additionalInfo: {
+      party: {
+        area: "Thiruvanathapuram",
+        name: "Indian National Congress",
+        annotation: "(INC)",
+      },
+    },
+
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 1",
+    },
+    icon: {
+      url: "./assets/icon-avatar.png",
+    },
   },
   {
     img: {
       url: "./assets/icon-avatar.png",
       alt: "image",
     },
-    heading: "Sample Name",
-    place: "Ernakulam",
-    party: (
-      <>
-        Sample Party
-        <span>(sample title)</span>
-      </>
-    ),
-    link: "#",
-    iconUrl: "./assets/icon-avatar.png",
+    name: "Candidate Name",
+    additionalInfo: {
+      party: {
+        area: "Thiruvanathapuram",
+        name: "Indian National Congress",
+        annotation: "(INC)",
+      },
+    },
+
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 1",
+    },
+    icon: {
+      url: "./assets/icon-avatar.png",
+    },
   },
   {
     img: {
       url: "./assets/icon-avatar.png",
       alt: "image",
     },
-    heading: "Sample Name",
-    place: "Thiruvananthapuram",
-    party: (
-      <>
-        Sample Party
-        <span>(sample title)</span>
-      </>
-    ),
-    link: "#",
-    iconUrl: "./assets/icon-avatar.png",
+    name: "Candidate Name",
+    additionalInfo: {
+      party: {
+        area: "Thiruvanathapuram",
+        name: "Indian National Congress",
+        annotation: "(INC)",
+      },
+    },
+
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 1",
+    },
+    icon: {
+      url: "./assets/icon-avatar.png",
+    },
   },
   {
     img: {
       url: "./assets/icon-avatar.png",
       alt: "image",
     },
-    heading: "Sample Name",
-    place: "Wayanadu",
-    party: (
-      <>
-        Sample Party
-        <span>(sample title)</span>
-      </>
-    ),
-    link: "#",
-    iconUrl: "./assets/icon-avatar.png",
+    name: "Candidate Name",
+    additionalInfo: {
+      party: {
+        area: "Thiruvanathapuram",
+        name: "Indian National Congress",
+        annotation: "(INC)",
+      },
+    },
+
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 1",
+    },
+    icon: {
+      url: "./assets/icon-avatar.png",
+    },
   },
   {
     img: {
       url: "./assets/icon-avatar.png",
       alt: "image",
     },
-    heading: "Sample Name",
-    place: "Wayanadu",
-    party: (
-      <>
-        Sample Party
-        <span>(sample title)</span>
-      </>
-    ),
-    link: "#",
-    iconUrl: "./assets/icon-avatar.png",
+    name: "Candidate Name",
+    additionalInfo: {
+      party: {
+        area: "Thiruvanathapuram",
+        name: "Indian National Congress",
+        annotation: "(INC)",
+      },
+    },
+
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 1",
+    },
+    icon: {
+      url: "./assets/icon-avatar.png",
+    },
   },
 ];
