@@ -41,7 +41,7 @@ const AvatarInfo = ({
           />
         )}
         {additionalInfo && additionalInfo?.link && (
-          <AppButton {...additionalInfo.link} />
+          <AppButton {...additionalInfo.link} stretchedLink />
         )}
       </AppBox>
     </AppBox>

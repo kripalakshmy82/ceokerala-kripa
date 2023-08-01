@@ -48,12 +48,12 @@ AppTabNavigation.propTypes = {
   className: string.isRequired,
 };
 
-function AppTabContent({ render }) {
+function AppTabContent({ render, totalPane }) {
   const [activeTabID] = useContext(TabContext);
 
   return (
     <Tab.Content>
-      <Tab.Pane eventKey={activeTabID}>{render(activeTabID)}</Tab.Pane>
+      <Tab.Pane eventKey={activeTabID} unmountOnExit>{render(activeTabID)}</Tab.Pane>
     </Tab.Content>
   );
 }
