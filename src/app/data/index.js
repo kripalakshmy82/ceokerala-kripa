@@ -714,3 +714,96 @@ export const electionCategoryData = [
     iconUrl: "./assets/icon-avatar.png"
   },
 ];
+
+export const electionGalleryData = [
+  {
+    id: 1,
+    title:
+      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
+    description:
+      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    img: {
+      url: "./gallery/gallery-1.jpg",
+      alt: "Gallery 1",
+    },
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 1",
+    },
+  },
+  {
+    id: 2,
+    title:
+      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
+    description:
+      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    img: {
+      url: "./gallery/gallery-2.jpg",
+      alt: "Gallery 2",
+    },
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 2",
+    },
+  },
+  {
+    id: 3,
+    title:
+      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
+    description:
+      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 3",
+    },
+    img: {
+      url: "./gallery/gallery-3.jpg",
+      alt: "Gallery 2",
+    },
+  },
+  {
+    id: 4,
+    title:
+      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
+    description:
+      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    img: {
+      url: "./gallery/gallery-1.jpg",
+      alt: "Gallery 1",
+    },
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 1",
+    },
+  },
+  {
+    id: 5,
+    title:
+      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
+    description:
+      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    img: {
+      url: "./gallery/gallery-2.jpg",
+      alt: "Gallery 2",
+    },
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 2",
+    },
+  },
+  {
+    id: 6,
+    title:
+      "ECI team visit to Kerala on 17-18, Janurary 2019 review Lok Sabha Election related work.",
+    description:
+      "SLorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    link: {
+      href: "#",
+      anchorTitle: "Gallery 3",
+    },
+    img: {
+      url: "./gallery/gallery-3.jpg",
+      alt: "Gallery 2",
+    },
+  },
+];
