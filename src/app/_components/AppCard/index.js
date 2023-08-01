@@ -5,9 +5,15 @@ import classNames from "classnames";
 import { AppBox } from "../Elements";
 import AppButton from "../AppButton";
 
-const AppCard = ({ isShadow = false, cardType = "default", children }) => {
+const AppCard = ({
+  isShadow = false,
+  cardType = "default",
+  themeCard = false,
+  children,
+}) => {
   const appCardClassNames = classNames({
-    "overflow-hidden rounded-theme flex-fill border-0 p-0 text-left bg-transparent app-card position-relative": true,
+    "theme-card": themeCard,
+    "rounded-theme flex-fill border-0 p-0 text-left bg-transparent app-card position-relative": true,
     "shadow-lg": isShadow,
     "card-item shadow-sm": cardType === "hover",
   });
@@ -18,6 +24,7 @@ const AppCard = ({ isShadow = false, cardType = "default", children }) => {
 AppCard.propTypes = {
   className: string,
   cardType: oneOf(["hover", "default"]),
+  themeCard: bool,
   isShadow: bool,
   children: node.isRequired,
 };
@@ -31,7 +38,8 @@ const InfoCard = ({
   iconUrl = "",
   className = "",
   link = {},
-  playIcon,
+  playIcon = false,
+  themeCard = false
 }) => {
   const titleClassName = classNames({
     "d-flex gap-4 align-items-center": cardTitleDir === "row",
@@ -47,7 +55,7 @@ const InfoCard = ({
   });
 
   return (
-    <AppCard cardType="hover">
+    <AppCard cardType="hover" themeCard={themeCard}>
       {img && <Card.Img variant="top" src={img.url} alt={img.alt} />}
       {playIcon && (
         <span className="m-auto d-block position-absolute video-icon">
@@ -76,7 +84,7 @@ const InfoCard = ({
           <h4 className="mb-3">{title}</h4>
         </Card.Title>
         <Card.Text className="mb-2 d-flex">{description}</Card.Text>
-        {link && <AppButton {...link} />}
+        {link && <AppButton {...link} stretchedLink />}
       </Card.Body>
     </AppCard>
   );
@@ -98,6 +106,7 @@ InfoCard.propTypes = {
   }),
   className: string.isRequired,
   playIcon: bool,
+  themeCard: bool,
 };
 
 const PromoCard = ({ className = "", img, type = "promo" }) => {
