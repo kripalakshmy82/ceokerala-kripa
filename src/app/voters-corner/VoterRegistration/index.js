@@ -3,9 +3,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { InfoCard, AppSection, AppText } from "@/app/_components";
 
-import { registerCardData } from "@/app/data";
-
-const VoterRegistration = () => {
+const VoterRegistration = ({ data }) => {
   return (
     <AppSection id="Registration" className="section-v-corner section-block-md">
       <Container>
@@ -13,11 +11,12 @@ const VoterRegistration = () => {
           <Col lg={12} className="mb-4">
             <AppText render={() => <h2>Registration</h2>} />
           </Col>
-          {registerCardData.map(({ ...rest }, key) => (
+          {data.map(({ ...rest }, key) => (
             <Col lg={4} md={4} sm={12} xs={12} key={key}>
               <InfoCard
-                className="p-0 theme-card overflow-hidden"
+                className="py-5 px-4"
                 cardTitleDir="row"
+                themeCard
                 {...rest}
               />
             </Col>

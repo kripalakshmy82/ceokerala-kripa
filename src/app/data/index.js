@@ -417,103 +417,54 @@ export const helpLinks = [
   },
 ];
 
+// Voters Corner Data
+
+// To create a line break or new line (<br>), end a line with two or more spaces, and then type return.
 export const registerCardData = [
   {
     img: {
       url: "./gallery/gallery-1.jpg",
       alt: "image",
     },
-    title: (
-      <>
-        Electors
-        <br />
-        Registration
-      </>
-    ),
+    title: `Electors  
+    Registration`,
     iconUrl: "./assets/sveep.svg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    link: {
+      href: "#",
+      anchorTitle: "Register",
+    },
   },
   {
     img: {
       url: "./gallery/gallery-2.jpg",
       alt: "image",
     },
-    title: (
-      <>
-        Track your
-        <br />
-        Registration Status
-      </>
-    ),
+    title: `Track your  
+    Registration Status`,
     iconUrl: "./assets/sveep.svg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    link: {
+      href: "#",
+      anchorTitle: "Status",
+    },
   },
   {
     img: {
       url: "./gallery/gallery-3.jpg",
       alt: "image",
     },
-    title: (
-      <>
-        Online forms for
-        <br />
-        Registration in E-roll
-      </>
-    ),
+    title: `Online forms for  
+    Registration in E-roll`,
     iconUrl: "./assets/sveep.svg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
-  },
-];
-
-export const infoCardData = [
-  {
-    alt: "image",
-    imgUrl: "./assets/icon-home.png",
-    title: (
-      <>
-        Know your
-        <br />
-        Polling Booth
-      </>
-    ),
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
-  },
-  {
-    alt: "image",
-    imgUrl: "./assets/icon-avatar.png",
-    title: (
-      <>
-        Know your
-        <br />
-        Booth Level Officers (BLO)
-      </>
-    ),
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
-  },
-];
-
-export const externalCardData = [
-  {
-    title: "Electoral roll Continuous Updating with Suppliment",
-    img: {
-      url: "./gallery-ext/img1.jpg",
-      alt: "image",
+    link: {
+      href: "#",
+      anchorTitle: "Online Form",
     },
-    link: "#",
-  },
-
-  {
-    title: "Search in Enroll Roll",
-    img: {
-      url: "./gallery-ext/img2.jpg",
-      alt: "image",
-    },
-    link: "#",
   },
 ];
 
@@ -524,15 +475,79 @@ export const promoCardData = {
   },
 };
 
-export const vCornerBnrData = {
-  link: "#",
-  heading: (
-    <>
-      Voters <span>Corner</span>
-    </>
-  ),
-  currentTitle: "voters-corner",
-};
+export const infoCardData = [
+  {
+    id: 1,
+    title: `Know your  
+    Polling Booth`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    link: {
+      href: "#",
+      anchorTitle: "Polling Booth",
+    },
+    iconUrl: "./assets/icon-home.png",
+  },
+  {
+    id : 2,
+    title: `Know your  
+    Booth Level Officers (BLO)`,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    iconUrl: "./assets/icon-avatar.png",
+    link: {
+      href: "#",
+      anchorTitle: "Polling Booth",
+    },
+  },
+];
+
+export const externalCardData = [
+  {
+    title: `Electoral roll Continuous Updating with  
+    Suppliment`,
+    img: {
+      url: "./gallery-ext/img1.jpg",
+      alt: "image",
+    },
+    link: {
+      href: "#",
+      anchorTitle: "Electoral Roll",
+      title: "Electoral Roll",
+      type: "external"
+    },
+  },
+  {
+    title: `Search in   
+    Enroll Roll`,
+    img: {
+      url: "./gallery-ext/img2.jpg",
+      alt: "image",
+    },
+    link: {
+      href: "#",
+      anchorTitle: "Search in Roll",
+      title: "Search in Roll",
+      type: "external",
+    },
+  },
+];
+
+
+export const enRollUpdation = {
+  title: `Electoral roll Continuous Updating  
+  with Supplement ( w.r.t 01.07.2023)`,
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+  iconUrl: "./assets/icon-link.png",
+  link: {
+    href: "#",
+    anchorTitle: "Search in Roll",
+    title: "Search in Roll",
+  },
+}
+
+// End Voters Corner Data
+
 
 export const eHistoryBnrData = {
   link: "#",
