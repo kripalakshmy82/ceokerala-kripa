@@ -12,7 +12,7 @@ const AppButton = ({
   anchorTitle,
 }) => {
   const appBtnClassNames = classNames({
-    "text-center d-block stretched-link": true,
+    "text-center d-inline-block stretched-link": true,
     "applink-btn": variant === "default",
     "theme-btn-component border-theme": variant === "themeBtn",
     "color-black": color === "black",
@@ -23,7 +23,7 @@ const AppButton = ({
     <Link href={href} className={appBtnClassNames} title={anchorTitle}>
       {variant === "themeBtn" && title}
       {variant === "default" && (
-        <span className="d-block">
+        <span className="d-inline-block">
           <FontAwesomeIcon icon={faArrowRightLong} />
         </span>
       )}

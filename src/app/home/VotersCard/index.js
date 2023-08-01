@@ -56,13 +56,15 @@ const VotersCard = ({ data }) => {
     <AppSection id="voters-card" className="voter-h-card-sec mt-4">
       <Container>
         <Row>
-          <AppCard isShadow>
-            <AppBox className="py-5 d-flex flex-lg-row flex-md-row flex-sm-column flex-column justify-content-between align-items-center">
-              {data.map((vCd, key) => (
-                <VoterCardItem {...vCd} key={key} />
-              ))}
-            </AppBox>
-          </AppCard>
+          <AppBox className="bg-white rounded-theme p-0">
+            <AppCard isShadow>
+              <AppBox className="py-5 d-flex flex-lg-row flex-md-row flex-sm-column flex-column justify-content-between align-items-center">
+                {data.map((vCd, key) => (
+                  <VoterCardItem {...vCd} key={key} />
+                ))}
+              </AppBox>
+            </AppCard>
+          </AppBox>
         </Row>
       </Container>
     </AppSection>
