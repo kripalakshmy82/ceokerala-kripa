@@ -14,7 +14,7 @@ const ExternalSource = ({ data }) => {
           <Row>
             {data.map(({ ...rest }, key) => (
               <Col lg={6} md={6} sm={12} xs={12} key={key}>
-                <InfoCard className="px-4 py-4" {...rest} cardTitleDir="row" />
+                <InfoCard className="px-4 py-4" {...rest} cardTitleDir="row" themeCard />
               </Col>
             ))}
           </Row>

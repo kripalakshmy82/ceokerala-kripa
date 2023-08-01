@@ -533,10 +533,28 @@ footer {
   width: 40px;
   text-align: center;
 }
+.pagination .page-link-active.page-item.active span {
+  color: #fff;
+  border: 1px solid #5F4BDB;
+  background-color: #5F4BDB;
+}
 .card-item.shadow-sm:hover {
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.115) !important;
     -moz-box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.115) !important;
     -webkit-box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.115) !important;
+}
+.nav.nav-pills .nav-link {
+  padding-right: 48px;
+  padding-left: 48px;
+}
+.carousel-common .card-item.shadow-sm:hover {
+    box-shadow: 0 1rem 1rem rgba(198, 198, 198, 0.115) !important;
+    -moz-box-shadow: 0 1rem 1rem rgba(198, 198, 198, 0.115) !important;
+    -webkit-box-shadow: 0 1rem 1rem rgba(198, 198, 198, 0.115) !important;
+}
+#history .nav-pills .nav-link.active {
+  color: #fff;
+    background-color: #5F4BDB;
 }
 @media (prefers-color-scheme: dark) {
   html {

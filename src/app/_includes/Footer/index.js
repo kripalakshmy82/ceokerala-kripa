@@ -138,7 +138,7 @@ const Footer = () => {
         <Container>
           <p className="mb-0 text-white text-center">
             Developed &amp; Maintained by
-            <a href="#" target="_blank" className="text-warning">
+            <a href="#" target="_blank" className="text-gray ms-2">
               Invis
             </a>
           </p>
